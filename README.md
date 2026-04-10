@@ -70,19 +70,6 @@ src/
 
 ---
 
-## Screenshots
-
-### Hero Section
-![Hero](./assets/images/hero-preview.png)
-
-### Problem Section
-![Problem](./assets/images/problem-preview.png)
-
----
-
-
----
-
 ## Performance Notes
 
 - Video optimized for web (<6MB)  
