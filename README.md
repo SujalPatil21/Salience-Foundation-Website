@@ -1,95 +1,152 @@
-# Salience Foundation — Cinematic Website
+# Salience Foundation — Modern NGO Website
 
-A modern, cinematic storytelling website built for the Salience Foundation, a non-profit focused on empowering rural talent in India through sports and quality education.
-
----
-
-## 1. Project Overview
-
-This project transforms a traditional NGO website into a high-impact digital experience using storytelling, smooth animations, and real-world visuals. The design language emphasizes spacious grids, premium typography, and a cohesive brand identity that showcases grassroots athletic drive and community transformation.
+A modern, responsive website built for **Salience Foundation**, a non-profit organization dedicated to empowering rural youth across India through sports, education, leadership, and community development.
 
 ---
 
-## 2. Key Features
+# Project Overview
 
-- **Multi-Page SPA Architecture**: Seamless routing for all core pages, including:
-  - **Home**: Narrative index introducing our mission.
-  - **About**: Governance principles, organizational goals, and background.
-  - **Programs**: YuvaGati Sports Academy and Girls Football Initiative details.
-  - **Gallery**: Responsive media grid with category filters and an interactive fullscreen Lightbox.
-  - **Achievements**: Vertical milestone timeline and placeholder stats.
-  - **Students**: Nurtured skills matrix and student journey timelines.
-  - **Events**: Filterable upcoming activities calendar and past archives.
-  - **Policies**: Legal guidelines, Child Protection safeguarding grids, and FAQs.
-  - **Contact**: Interactive React Leaflet map (OpenStreetMap tiles) and validation-ready forms.
-  - **Partner With Us**: Clear corporate partnerships timeline and process steps.
-- **Scroll-Linked Navbar**: Smooth transition from transparent to solid white, persistence across route changes to prevent flashes.
-- **Animated Page Transitions**: Wait-state route fades utilizing Framer Motion.
-- **Responsive Layout**: Fluid column adaptations across Desktop, Tablet, and Mobile viewports.
+This project reimagines the Salience Foundation's digital presence with a modern, premium user experience focused on storytelling, accessibility, and responsive design.
+
+The website emphasizes clean layouts, smooth animations, immersive hero sections, and reusable components while maintaining a professional identity suitable for an NGO.
 
 ---
 
-## 3. Technology Stack
+# Features
 
-- **Framework**: React 18 & Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Navigation**: React Router v7
-- **Mapping**: React Leaflet v4 & Leaflet v1
+## Multi-Page SPA Architecture
+
+The website includes the following pages:
+
+- **Home** – Introduction to the foundation, impact, featured programs, student stories, and events.
+- **Programs** – Detailed overview of Salience Foundation's initiatives and areas of impact.
+- **Partner With Us** – Information for corporates, schools, NGOs, and volunteers interested in collaborating.
+- **Gallery** – Responsive gallery with filtering and fullscreen lightbox.
+- **Achievements** – Milestone timeline and future-ready achievement layout.
+- **Students** – Student journey, skills development, and success story placeholders.
+- **Events** – Upcoming and past event layouts with future-ready placeholders.
+- **Policies** – Transparency, governance, and organizational policy resources.
+- **Contact** – Contact form, interactive Leaflet map, and official contact information.
 
 ---
 
-## 4. Getting Started
+## User Experience
 
-### Local Installation
+- Responsive design for Desktop, Tablet, and Mobile
+- Full-screen cinematic hero sections
+- Smooth page transitions using Framer Motion
+- Scroll-responsive transparent navbar
+- Interactive image gallery with lightbox
+- React Leaflet integration using OpenStreetMap
+- Modern component-based architecture
+- Accessible and reusable UI components
+- SEO-ready structure
+- Optimized performance with lazy loading
 
-1. Navigate to the frontend directory:
-   ```bash
-   cd Frontend
-   ```
-2. Install dependencies (resolves legacy peer dependencies for React 18 maps compatibility):
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+---
 
-### Production Build
+# Technology Stack
 
-Create optimized static assets:
+- **Framework:** React 18 + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Routing:** React Router
+- **Maps:** React Leaflet + OpenStreetMap
+- **Icons:** Lucide React
+
+---
+
+# Getting Started
+
+## Installation
+
+```bash
+git clone <repository-url>
+
+cd Salience-Foundation-Website/Frontend
+
+npm install
+```
+
+## Development
+
+```bash
+npm run dev
+```
+
+## Production Build
+
 ```bash
 npm run build
 ```
 
-Preview the build locally:
+## Preview Production Build
+
 ```bash
 npm run preview
 ```
 
 ---
 
-## 5. Directory Structure
+# Project Structure
 
-- `Frontend/src/assets/`: Visual media assets.
-- `Frontend/src/components/layout/`: Global persisted layout blocks (Navbar, Footer, Layout).
-- `Frontend/src/components/maps/`: React Leaflet coordinate integrations.
-- `Frontend/src/components/ui/`: Reusable buttons, page heroes, and container layouts.
-- `Frontend/src/constants/`: Centralized content files for text editing.
-- `Frontend/src/pages/`: Main page components.
+```text
+Frontend/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── maps/
+│   │   └── ui/
+│   ├── constants/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+└── package.json
+```
 
 ---
 
-## 6. Developer Documentation
+# Documentation
 
-For detailed information on design specs, animation rules, and components, consult the files in our developer documentation folder:
-- **[Architecture Guide](file:///c:/Github/Salience-Foundation-Website/docs/ARCHITECTURE.md)**
-- **[Design System](file:///c:/Github/Salience-Foundation-Website/docs/DESIGN_SYSTEM.md)**
-- **[Component Guide](file:///c:/Github/Salience-Foundation-Website/docs/COMPONENT_GUIDE.md)**
-- **[Folder Structure](file:///c:/Github/Salience-Foundation-Website/docs/FOLDER_STRUCTURE.md)**
-- **[Animations Guide](file:///c:/Github/Salience-Foundation-Website/docs/ANIMATIONS.md)**
-- **[Content Guide](file:///c:/Github/Salience-Foundation-Website/docs/CONTENT_GUIDE.md)**
-- **[Development Onboarding](file:///c:/Github/Salience-Foundation-Website/docs/DEVELOPMENT.md)**
-- **[Deployment Manual](file:///c:/Github/Salience-Foundation-Website/docs/DEPLOYMENT.md)**
-- **[AI Context Map](file:///c:/Github/Salience-Foundation-Website/docs/LLM_CONTEXT.md)**
+Additional project documentation is available inside the **docs/** directory.
+
+- Architecture Guide
+- Design System
+- Component Guide
+- Folder Structure
+- Animation Guide
+- Content Guide
+- Development Guide
+- Deployment Guide
+- LLM Context
+
+> These documents are intended for contributors and future maintainers. When viewed on GitHub, navigate to the `docs/` folder to access them.
+
+---
+
+# Future Improvements
+
+- Backend integration
+- CMS integration
+- Dynamic content management
+- Authentication (if required)
+- Donation portal
+- Admin dashboard
+- Event management system
+- Student management portal
+
+---
+
+# License
+
+This project is released under the **MIT License**.
+
+---
+
+# Acknowledgements
+
+Designed and developed to modernize the digital presence of **Salience Foundation**, helping showcase its mission of creating opportunities for rural youth through sports, education, leadership, and community engagement.
