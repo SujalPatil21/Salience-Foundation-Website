@@ -20,7 +20,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const isScrollLinkedPage = location.pathname === '/' || location.pathname === '/programs' || location.pathname === '/partner' || location.pathname === '/contact' || location.pathname === '/gallery' || location.pathname === '/policies' || location.pathname === '/achievements' || location.pathname === '/students' || location.pathname === '/events';
+  const isScrollLinkedPage = location.pathname === '/' || location.pathname === '/about' || location.pathname === '/programs' || location.pathname === '/partner' || location.pathname === '/contact' || location.pathname === '/achievements' || location.pathname === '/students' || location.pathname === '/events';
 
   // Smooth scroll transformations for the homepage, fallback to solid white on sub-pages
   const backgroundOpacity = useTransform(scrollY, [0, 150], [0, 0.95]);
@@ -82,13 +82,13 @@ const Navbar = () => {
 
         {/* Center Column: Navigation links (visually centered on grid, hidden on mobile/tablet) */}
         <div className="hidden lg:flex justify-self-center items-center">
-          <ul className="flex items-center gap-[38px]">
+          <ul className="flex items-center gap-5 xl:gap-[28px] 2xl:gap-[36px]">
             {NAV_ITEMS.map((item, idx) => (
               <li key={idx} className="relative flex items-center h-20">
                 <NavLink
                   to={item.path}
                   className={({ isActive }) => 
-                    `relative group py-1.5 text-[16.5px] tracking-wide transition-colors duration-300 ease-in-out ${
+                    `relative group py-1.5 text-[15px] xl:text-[16.5px] tracking-wide transition-colors duration-300 ease-in-out whitespace-nowrap ${
                       isActive 
                         ? 'font-semibold' 
                         : 'font-medium hover:text-[#F3EA00]'

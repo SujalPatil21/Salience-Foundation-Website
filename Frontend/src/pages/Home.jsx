@@ -6,8 +6,6 @@ import ProgramsPreview from '../components/sections/ProgramsPreview';
 import Achievements from '../components/sections/Achievements';
 import StudentStories from '../components/sections/StudentStories';
 import Events from '../components/sections/Events';
-import Partners from '../components/sections/Partners';
-import Gallery from '../components/sections/Gallery';
 import CallToAction from '../components/sections/CallToAction';
 
 /**
@@ -23,8 +21,6 @@ const Home = () => {
       <Achievements />
       <StudentStories />
       <Events />
-      <Partners />
-      <Gallery />
       <CallToAction />
     </>
   );
