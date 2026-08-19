@@ -20,7 +20,25 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  const isScrollLinkedPage = location.pathname === '/' || location.pathname === '/about' || location.pathname === '/programs' || location.pathname === '/partner' || location.pathname === '/contact' || location.pathname === '/achievements' || location.pathname === '/students' || location.pathname === '/events';
+  const scrollLinkedPaths = [
+    '/',
+    '/about',
+    '/programs',
+    '/partner',
+    '/contact',
+    '/achievements',
+    '/students',
+    '/events',
+    '/policies',
+    '/privacy-policy',
+    '/privacy',
+    '/terms-and-conditions',
+    '/terms',
+    '/terms-conditions',
+    '/refund-policy',
+    '/refunds'
+  ];
+  const isScrollLinkedPage = scrollLinkedPaths.includes(location.pathname);
 
   // Smooth scroll transformations for the homepage, fallback to solid white on sub-pages
   const backgroundOpacity = useTransform(scrollY, [0, 150], [0, 0.95]);

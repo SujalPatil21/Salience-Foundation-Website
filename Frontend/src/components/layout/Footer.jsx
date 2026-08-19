@@ -1,5 +1,6 @@
 import React from 'react';
-import { NAV_ITEMS } from '../../constants/navigation';
+import { Link } from 'react-router-dom';
+import { NAV_ITEMS, FOOTER_LEGAL_LINKS } from '../../constants/navigation';
 import Container from '../ui/Container';
 import logoImg from '../../assets/images/salience logo.png';
 
@@ -14,11 +15,13 @@ const Footer = () => {
           
           {/* Brand Info */}
           <div className="flex flex-col gap-4">
-            <img
-              src={logoImg}
-              alt="Salience Foundation Logo"
-              className="h-12 w-auto object-contain self-start mb-2"
-            />
+            <Link to="/" className="inline-block self-start mb-2">
+              <img
+                src={logoImg}
+                alt="Salience Foundation Logo"
+                className="h-12 w-auto object-contain"
+              />
+            </Link>
 
             <p className="text-white/60 text-sm font-light leading-relaxed">
               Bridging the gap between talent and opportunity for rural youth across India. Empowering communities through structured sports and quality education.
@@ -33,12 +36,12 @@ const Footer = () => {
             <ul className="flex flex-col gap-2.5">
               {NAV_ITEMS.map((item, idx) => (
                 <li key={idx}>
-                  <a
-                    href={item.path}
+                  <Link
+                    to={item.path}
                     className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -107,12 +110,21 @@ const Footer = () => {
 
         </div>
 
-        {/* Copyright */}
+        {/* Copyright & Legal Links */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-light">
           <p>© {new Date().getFullYear()} Salience Foundation. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#terms" className="hover:text-brand-yellow transition-colors duration-200">Terms of Service</a>
-            <a href="#privacy" className="hover:text-brand-yellow transition-colors duration-200">Privacy Policy</a>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+            {FOOTER_LEGAL_LINKS.map((legal, idx) => (
+              <React.Fragment key={idx}>
+                {idx > 0 && <span className="text-white/20 hidden sm:inline">•</span>}
+                <Link
+                  to={legal.path}
+                  className="hover:text-brand-yellow transition-colors duration-200"
+                >
+                  {legal.label}
+                </Link>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </Container>
@@ -121,3 +133,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
