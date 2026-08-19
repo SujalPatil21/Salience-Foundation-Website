@@ -124,9 +124,11 @@ const PoliciesPage = () => {
                       Coming Soon
                     </span>
                   ) : (
-                    <Button variant="secondary" className="w-full text-xs font-semibold py-2.5">
-                      View Policy
-                    </Button>
+                    <Link to={policy.path || '#'}>
+                      <Button variant="secondary" className="w-full text-xs font-semibold py-2.5">
+                        View Policy
+                      </Button>
+                    </Link>
                   )}
                 </div>
               </div>

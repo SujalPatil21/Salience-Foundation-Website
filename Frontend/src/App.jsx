@@ -10,6 +10,9 @@ import StudentsPage from './pages/StudentsPage';
 import EventsPage from './pages/EventsPage';
 import GalleryPage from './pages/GalleryPage';
 import PoliciesPage from './pages/PoliciesPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
+import RefundPolicyPage from './pages/RefundPolicyPage';
 import ContactPage from './pages/ContactPage';
 import PartnerPage from './pages/PartnerPage';
 
@@ -58,8 +61,14 @@ const AnimatedRoutes = () => {
         <Route path="/achievements" element={<PageTransition><AchievementsPage /></PageTransition>} />
         <Route path="/students" element={<PageTransition><StudentsPage /></PageTransition>} />
         <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
-        {/* <Route path="/gallery" element={<PageTransition><GalleryPage /></PageTransition>} />
-        <Route path="/policies" element={<PageTransition><PoliciesPage /></PageTransition>} /> */}
+        <Route path="/policies" element={<PageTransition><PoliciesPage /></PageTransition>} />
+        <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicyPage /></PageTransition>} />
+        <Route path="/privacy" element={<PageTransition><PrivacyPolicyPage /></PageTransition>} />
+        <Route path="/terms-and-conditions" element={<PageTransition><TermsConditionsPage /></PageTransition>} />
+        <Route path="/terms" element={<PageTransition><TermsConditionsPage /></PageTransition>} />
+        <Route path="/terms-conditions" element={<PageTransition><TermsConditionsPage /></PageTransition>} />
+        <Route path="/refund-policy" element={<PageTransition><RefundPolicyPage /></PageTransition>} />
+        <Route path="/refunds" element={<PageTransition><RefundPolicyPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
         <Route path="/partner" element={<PageTransition><PartnerPage /></PageTransition>} />
       </Routes>
