@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import communityImage from '../../assets/images/Community.jpeg';
+import villageCouncilImg from '../../assets/images/community_village_council.jpeg';
 import GlowImage from '../ui/GlowImage';
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
@@ -23,8 +23,8 @@ const AboutPreview = () => {
             className="lg:col-span-5"
           >
             <GlowImage
-              src={communityImage}
-              alt="Salience Foundation Community"
+              src={villageCouncilImg}
+              alt="Salience Foundation Community & Youth"
               glowDirection="l"
               imageClassName="h-[450px] lg:h-[550px]"
             />

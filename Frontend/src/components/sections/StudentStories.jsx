@@ -4,8 +4,8 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import StudentCard from '../ui/StudentCard';
 import Button from '../ui/Button';
-import teamImg from '../../assets/images/Team.jpeg';
-import villageImg from '../../assets/images/Village_People.jpeg';
+import studentRahulImg from '../../assets/images/student_athlete_rahul.jpeg';
+import studentAnjaliImg from '../../assets/images/student_athlete_anjali.jpeg';
 
 /**
  * Student Stories Section. Displays student profiles who achieved sports/academic milestones.
@@ -13,16 +13,16 @@ import villageImg from '../../assets/images/Village_People.jpeg';
 const StudentStories = () => {
   const stories = [
     {
-      image: teamImg,
-      name: 'Rajesh Kumar',
+      image: studentRahulImg,
+      name: 'Rahul Soren',
       village: 'Salempur, Bihar',
       story: 'Coming from a family of farmers, I never thought I would kick a leather football, let alone represent my state. The academy gave me boots, coaches, and the faith I needed.',
       achievement: 'State U-17 Forward'
     },
     {
-      image: villageImg,
-      name: 'Priya Sharma',
-      village: 'Gara, Jharkhand',
+      image: studentAnjaliImg,
+      name: 'Anjali Kumari',
+      village: 'Khunti, Jharkhand',
       story: 'My village had no training spaces for girls. The foundation set up a program, bought us gear, and supported my schooling. I just got accepted to college on a sports scholarship.',
       achievement: 'National Scholar-Athlete'
     }

@@ -1,4 +1,12 @@
 import React from 'react';
+import tournamentCupImg from '../assets/images/tournament_scouting_cup.jpeg';
+import digitalClassImg from '../assets/images/digital_classroom_learning.jpeg';
+import villageCouncilImg from '../assets/images/community_village_council.jpeg';
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
+import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
+import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
 
 export const EVENT_CATEGORIES = [
   'All', 
@@ -6,23 +14,83 @@ export const EVENT_CATEGORIES = [
   'Community', 
   'Workshops', 
   'Training', 
-  'Youth Development', 
-  'Special Events'
+  'Girls Empowerment', 
+  'Volunteers'
 ];
 
 export const UPCOMING_EVENTS = [
-  { title: 'Football Tournament Cup', category: 'Football', date: 'Date: To Be Updated', location: 'Location: Ranchi Sector', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' },
-  { title: 'Youth Leadership Workshop', category: 'Workshops', date: 'Date: To Be Updated', location: 'Location: Community Lab', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' },
-  { title: 'Community Outreach Drive', category: 'Community', date: 'Date: To Be Updated', location: 'Location: Village Hub', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' },
-  { title: 'Girls Football Training Clinic', category: 'Girls Empowerment', date: 'Date: To Be Updated', location: 'Location: Academy Pitch', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' },
-  { title: 'Volunteer Coordination Seminar', category: 'Special Events', date: 'Date: To Be Updated', location: 'Location: Main Hall', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' },
-  { title: 'Sports Fitness & Health Summit', category: 'Training', date: 'Date: To Be Updated', location: 'Location: Sports Field', desc: 'Upcoming Event — Official Details Coming Soon. In this card, we will feature the event program, scheduling, age groups, and parent coordinates.' }
+  { 
+    title: 'Salience Rural Football Cup 2026', 
+    category: 'Football', 
+    date: 'Oct 12, 2026', 
+    location: 'Ranchi, Jharkhand', 
+    image: tournamentCupImg,
+    badge: 'Flagship Tournament',
+    desc: 'Annual championship bringing together 32 rural village youth teams for intense matches, scouting trials, and district selection opportunities.' 
+  },
+  { 
+    title: 'Youth Leadership & Digital Summit', 
+    category: 'Workshops', 
+    date: 'Nov 05, 2026', 
+    location: 'Community Hub, Ranchi', 
+    image: digitalClassImg,
+    badge: 'Education & Tech',
+    desc: 'A multi-day intensive workshop covering basic computer programming, secondary school study techniques, and public speaking.' 
+  },
+  { 
+    title: 'Village Council & Parent Alignment', 
+    category: 'Community', 
+    date: 'Nov 20, 2026', 
+    location: 'Khunti District, Jharkhand', 
+    image: villageCouncilImg,
+    badge: 'Community Outreach',
+    desc: 'Grassroots assembly engaging village elders and parents to ensure girls sports rights, school attendance, and nutrition support.' 
+  },
+  { 
+    title: 'Girls Grassroots Football Clinic', 
+    category: 'Girls Empowerment', 
+    date: 'Dec 02, 2026', 
+    location: 'Bahragora Sports Ground', 
+    image: girlsMatchImg,
+    badge: 'Girls Clinic',
+    desc: 'Specialized coaching camp dedicated to girls aged 10-16, focusing on dribbling, shooting technique, and leadership development.' 
+  },
+  { 
+    title: 'Volunteer Coaches Mentorship Clinic', 
+    category: 'Volunteers', 
+    date: 'Dec 15, 2026', 
+    location: 'Main Academy Pitch', 
+    image: coachMentorshipImg,
+    badge: 'Coach Development',
+    desc: 'Hands-on session with licensed trainers to prepare local volunteer coaches in match tactics, player safeguarding, and first aid.' 
+  },
+  { 
+    title: 'Youth Athletic Agility Camp', 
+    category: 'Training', 
+    date: 'Jan 08, 2027', 
+    location: 'East Singhbhum Grounds', 
+    image: youthTrainingImg,
+    badge: 'Fitness & Skills',
+    desc: 'High-intensity fitness, speed ladder drills, and tactical game plays for under-15 and under-17 academy trainees.' 
+  }
 ];
 
 export const PAST_EVENTS = [
-  { title: 'Village Scouting Cup', desc: 'Official Event Information Will Be Updated Soon.' },
-  { title: 'Local Digital Lab Activation', desc: 'Official Event Information Will Be Updated Soon.' },
-  { title: 'Safeguard Code Seminar', desc: 'Official Event Information Will Be Updated Soon.' }
+  { 
+    title: 'Monsoon Scouting Cup 2025', 
+    desc: 'Successfully scouted and enrolled 60+ rural youth into scholarship academies.',
+    image: trophyImg
+  },
+  { 
+    title: 'Digital Lab Activation Phase 1', 
+    desc: 'Distributed 30 laptops and launched after-school tuition hubs for rural scholars.',
+    image: digitalClassImg
+  },
+  { 
+    title: 'Indigenous Cultural Arts Festival', 
+    desc: 'Over 200 children celebrated traditional music, folk dance, and tribal art.',
+    image: culturalArtsImg
+  }
 ];
 
 export const EVENT_HIGHLIGHTS = [

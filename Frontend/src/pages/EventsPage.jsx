@@ -14,14 +14,14 @@ import {
 } from '../constants/eventsData';
 
 // Image imports
-import heroImg from '../assets/images/Team.jpeg';
-import galleryImg1 from '../assets/images/Children.jpeg';
-import galleryImg2 from '../assets/images/Community.jpeg';
-import galleryImg3 from '../assets/images/Girls.jpeg';
-import galleryImg4 from '../assets/images/Mud.jpeg';
+import tournamentCupImg from '../assets/images/tournament_scouting_cup.jpeg';
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
+import digitalClassImg from '../assets/images/digital_classroom_learning.jpeg';
 
 /**
- * Premium Events Page (Placeholder Version).
+ * Premium Events Page.
  * Renders upcoming filter grid, featured item, past timeline, and values highlights.
  */
 const EventsPage = () => {
@@ -44,7 +44,7 @@ const EventsPage = () => {
       {/* Hero Section */}
       <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         <img
-          src={heroImg}
+          src={tournamentCupImg}
           alt="Salience Foundation Events"
           className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-subtle-zoom"
         />
@@ -120,42 +120,42 @@ const EventsPage = () => {
 
           <div className="max-w-5xl mx-auto bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12">
             {/* Image banner */}
-            <div className="lg:col-span-6 aspect-video lg:aspect-auto bg-gray-100 relative">
+            <div className="lg:col-span-6 aspect-video lg:aspect-auto bg-gray-100 relative overflow-hidden">
               <img
-                src={heroImg}
+                src={tournamentCupImg}
                 alt="Featured Event Banner"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-brand-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
             {/* Event Info */}
             <div className="lg:col-span-6 p-8 md:p-10 flex flex-col justify-between">
               <div>
-                <span className="inline-block px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-yellow-800 bg-brand-yellow/20 mb-4">
-                  Upcoming Event — Official Details Coming Soon
+                <span className="inline-block px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-brand-black bg-brand-yellow mb-4">
+                  Featured Championship
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-brand-black mb-4 font-heading">
-                  Milestone Program Clinic
+                  Salience Rural Football Cup 2026
                 </h3>
                 <p className="text-brand-dark font-light text-sm leading-relaxed mb-6">
-                  This featured section will display coordinates, scheduled session agendas, and parent guidance guidelines once selection audits are validated.
+                  Our flagship annual tournament brings together 32 village teams from across Jharkhand and Bihar to showcase raw talent before regional scouting selectors.
                 </p>
               </div>
 
-              {/* Placeholders */}
+              {/* Coordinates */}
               <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
                 <div>
                   <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Date</span>
-                  <span className="text-xs font-bold text-brand-black">To Be Updated</span>
+                  <span className="text-xs font-bold text-brand-black">Oct 12, 2026</span>
                 </div>
                 <div>
-                  <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Time</span>
-                  <span className="text-xs font-bold text-brand-black">To Be Updated</span>
+                  <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Format</span>
+                  <span className="text-xs font-bold text-brand-black">32 Teams Knockout</span>
                 </div>
                 <div className="col-span-2 mt-2">
                   <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">Location</span>
-                  <span className="text-xs font-bold text-brand-black">Jharkhand coordination blocks</span>
+                  <span className="text-xs font-bold text-brand-black">Ranchi Sports Grounds, Jharkhand</span>
                 </div>
               </div>
             </div>
@@ -204,16 +204,29 @@ const EventsPage = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between"
+                  className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group"
                 >
-                  <div className="p-6 md:p-8">
-                    <span className="inline-block px-2.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider text-yellow-700 bg-brand-yellow/20 mb-4">
-                      Coming Soon
-                    </span>
+                  {/* Event Thumbnail */}
+                  {ev.image && (
+                    <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+                      <img
+                        src={ev.image}
+                        alt={ev.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-block px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-brand-black bg-brand-yellow shadow-sm">
+                          {ev.badge || ev.category}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-6">
                     <h4 className="font-heading font-bold text-brand-black text-lg mb-2">{ev.title}</h4>
-                    <p className="text-xs text-brand-dark font-light leading-relaxed mb-6">{ev.desc}</p>
+                    <p className="text-xs text-brand-dark/90 font-light leading-relaxed mb-4">{ev.desc}</p>
                   </div>
-                  <div className="bg-gray-50 border-t border-gray-100 px-6 py-4 flex justify-between items-center text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
+                  <div className="bg-gray-50 border-t border-gray-100 px-6 py-4 flex justify-between items-center text-[10px] text-gray-500 font-semibold uppercase tracking-wider">
                     <span>{ev.date}</span>
                     <span>{ev.location}</span>
                   </div>
@@ -230,19 +243,30 @@ const EventsPage = () => {
           <SectionHeading
             badge="Archive"
             title="Past events logs"
-            subtitle="Explore our archived coordinates. Details will be updated upon validation."
+            subtitle="Memorable moments from previous tournaments, workshops, and festivals."
             align="center"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {PAST_EVENTS.map((item, idx) => (
-              <div key={idx} className="bg-white border border-gray-100 p-8 rounded-2xl flex flex-col justify-between shadow-sm">
-                <h4 className="font-heading font-extrabold text-brand-black text-base md:text-lg mb-4">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-brand-dark italic font-light">
-                  {item.desc}
-                </p>
+              <div key={idx} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+                {item.image && (
+                  <div className="h-44 w-full overflow-hidden bg-gray-100">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col justify-between flex-1">
+                  <h4 className="font-heading font-extrabold text-brand-black text-base md:text-lg mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-brand-dark font-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -294,7 +318,7 @@ const EventsPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[galleryImg1, galleryImg2, galleryImg3, galleryImg4].map((src, idx) => (
+            {[girlsMatchImg, youthTrainingImg, trophyImg, digitalClassImg].map((src, idx) => (
               <div key={idx} className="relative aspect-[4/3] rounded-2xl overflow-hidden group shadow-sm">
                 <img
                   src={src}

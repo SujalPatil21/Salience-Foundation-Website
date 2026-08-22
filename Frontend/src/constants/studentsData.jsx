@@ -1,4 +1,10 @@
 import React from 'react';
+import studentAnjaliImg from '../assets/images/student_athlete_anjali.jpeg';
+import studentRahulImg from '../assets/images/student_athlete_rahul.jpeg';
+import studentSunitaImg from '../assets/images/student_athlete_sunita.jpeg';
+import studentAmitImg from '../assets/images/student_athlete_amit.jpeg';
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
 
 export const JOURNEY_STEPS = [
   {
@@ -49,12 +55,60 @@ export const JOURNEY_STEPS = [
 ];
 
 export const STUDENT_STORIES = [
-  { name: 'Student Name', age: '14 Years Old', program: 'YuvaGati Sports Academy', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' },
-  { name: 'Student Name', age: '15 Years Old', program: 'Girls Football Initiative', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' },
-  { name: 'Student Name', age: '13 Years Old', program: 'YuvaGati Sports Academy', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' },
-  { name: 'Student Name', age: '16 Years Old', program: 'Community Outreach Hub', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' },
-  { name: 'Student Name', age: '12 Years Old', program: 'Girls Football Initiative', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' },
-  { name: 'Student Name', age: '15 Years Old', program: 'YuvaGati Sports Academy', story: 'Official Story Coming Soon. In this card, we will feature the trainee journey, their academic school metrics, and tournament achievements.' }
+  { 
+    name: 'Anjali Kumari', 
+    age: '16 Years Old', 
+    village: 'Khunti, Jharkhand',
+    program: 'Girls Football Initiative', 
+    image: studentAnjaliImg,
+    badge: 'State U-17 Forward',
+    story: 'From playing with makeshift balls on uneven ground to leading her district team in state championships. Anjali maintains a 90% attendance record in school and mentors younger girls in her village.' 
+  },
+  { 
+    name: 'Rahul Soren', 
+    age: '15 Years Old', 
+    village: 'Salempur, Bihar',
+    program: 'YuvaGati Sports Academy', 
+    image: studentRahulImg,
+    badge: 'Academy Team Captain',
+    story: 'A natural leader on the pitch, Rahul has transformed disciplined training habits into top academic performance in science tuitions and computer lab sessions.' 
+  },
+  { 
+    name: 'Sunita Hansda', 
+    age: '14 Years Old', 
+    village: 'Gara, Jharkhand',
+    program: 'Scholar-Athlete Program', 
+    image: studentSunitaImg,
+    badge: 'Merit Scholar & Midfielder',
+    story: 'Supported by Salience Foundation with sports gear and secondary tuition grants, Sunita became the first girl in her family to complete high school with distinction.' 
+  },
+  { 
+    name: 'Amit Munda', 
+    age: '13 Years Old', 
+    village: 'Ranchi Sector, Jharkhand',
+    program: 'YuvaGati Sports Academy', 
+    image: studentAmitImg,
+    badge: 'Youth Goalkeeper',
+    story: 'Amit discovered his passion during an annual monsoon scouting cup. Through consistent coaching, he has become one of the top youth keepers in the district.' 
+  },
+  { 
+    name: 'Priya Mahato', 
+    age: '15 Years Old', 
+    village: 'Bahragora, Jharkhand',
+    program: 'Girls Football Initiative', 
+    image: girlsMatchImg,
+    badge: 'Tournament MVP',
+    story: 'Priya captained her village team to the finals of the Rural Cup, proving that young women in rural communities can break barriers through sports excellence.' 
+  },
+  { 
+    name: 'Vikram Murmu', 
+    age: '16 Years Old', 
+    village: 'East Singhbhum, Jharkhand',
+    program: 'Youth Leadership & Sports', 
+    image: youthTrainingImg,
+    badge: 'Peer Mentor & Winger',
+    story: 'Combining athletics with leadership modules, Vikram coordinates weekend football clinics for younger children across three neighboring villages.' 
+  }
 ];
 
 export const SKILLS_DEVELOPED = [
