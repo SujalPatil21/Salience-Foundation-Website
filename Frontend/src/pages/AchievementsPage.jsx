@@ -13,7 +13,7 @@ import {
 } from '../constants/achievementsData';
 
 // Image import
-import childrenImg from '../assets/images/Children.jpeg';
+import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
 
 /**
  * Premium Achievements Page (Placeholder Version).
@@ -26,7 +26,7 @@ const AchievementsPage = () => {
       {/* Hero Section */}
       <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         <img
-          src={childrenImg}
+          src={trophyImg}
           alt="Salience Achievements and Milestones"
           className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-subtle-zoom"
         />

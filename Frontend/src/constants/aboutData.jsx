@@ -1,4 +1,8 @@
 import React from 'react';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
+import villageCouncilImg from '../assets/images/community_village_council.jpeg';
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
 
 export const ABOUT_HERO = {
   badge: 'Non-Profit · Section 8 Company · Ranchi, Jharkhand',
@@ -24,6 +28,7 @@ export const MULTIFACETED_PILLARS = [
     title: 'Rural Sporting Talents',
     subtitle: 'Unlocking Raw Athletic Potential',
     badge: 'Sports Excellence',
+    image: youthTrainingImg,
     desc: 'Identifying and nurturing exceptional athletes in remote regions. Providing access to quality gear, certified coaching, nutrition, and competitive platforms so young athletes reach their full potential.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
@@ -36,6 +41,7 @@ export const MULTIFACETED_PILLARS = [
     title: 'Artistic Learning & Expression',
     subtitle: 'Music, Dance, Theater & Visual Arts',
     badge: 'Creative Arts',
+    image: culturalArtsImg,
     desc: 'Cultivating creativity and passion across visual and performing arts. Nurturing creative abilities to enrich young lives and encouraging individuals to confidently pursue their artistic dreams.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
@@ -48,6 +54,7 @@ export const MULTIFACETED_PILLARS = [
     title: 'Cultural Heritage & Diversity',
     subtitle: 'Preserving Traditions & Fostering Unity',
     badge: 'Cultural Development',
+    image: villageCouncilImg,
     desc: 'Committed to preserving and celebrating indigenous cultural heritage, folklore, and traditions. Our initiatives raise awareness about diverse cultures to build social harmony and mutual respect.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
@@ -60,6 +67,7 @@ export const MULTIFACETED_PILLARS = [
     title: 'Community Transformation',
     subtitle: 'Inclusivity & Equal Opportunities',
     badge: 'Social Impact',
+    image: girlsMatchImg,
     desc: 'Driving collective growth through equal opportunity, gender equity, and youth empowerment. Partnering with village leaders, schools, and families to create self-sustaining, thriving communities.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">

@@ -137,36 +137,47 @@ const StudentsPage = () => {
         </Container>
       </section>
 
-      {/* Student Stories (Placeholder Cards) */}
+      {/* Student Stories (Verified Cards) */}
       <section id="student-stories-section" className="py-24 border-b border-gray-50 bg-white">
         <Container>
           <SectionHeading
             badge="Trainees"
-            title="Trainee success logs"
-            subtitle="Verified student profiles will be updated once field data audits complete."
+            title="Trainee success stories"
+            subtitle="Meet the inspiring young scholar-athletes whose dedication is paving the way for their communities."
             align="center"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {STUDENT_STORIES.map((student, idx) => (
-              <div key={idx} className="bg-white border border-gray-100 p-8 rounded-2xl flex flex-col items-center text-center shadow-sm">
-                {/* Circular Placeholder Image */}
-                <div className="w-24 h-24 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center mb-6">
-                  <span className="text-gray-400 text-2xl font-bold">👤</span>
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white border border-gray-100 p-8 rounded-2xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow group"
+              >
+                {/* Student Photo */}
+                <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-brand-yellow/50 shadow-md mb-5 group-hover:scale-105 transition-transform duration-300">
+                  <img
+                    src={student.image}
+                    alt={student.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <span className="inline-block px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-yellow-700 bg-brand-yellow/20 rounded-md mb-3">
-                  Official Story Coming Soon
+                <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-black bg-brand-yellow rounded-full mb-3 shadow-xs">
+                  {student.badge}
                 </span>
-                <h3 className="text-lg md:text-xl font-bold text-brand-black mb-1 font-heading">
+                <h3 className="text-xl font-bold text-brand-black mb-1 font-heading">
                   {student.name}
                 </h3>
-                <span className="text-brand-dark/75 text-xs font-semibold uppercase tracking-wider mb-4 block">
-                  {student.age} &bull; {student.program}
+                <span className="text-brand-dark/75 text-xs font-medium tracking-wide mb-4 block">
+                  {student.age} &bull; {student.village} &bull; {student.program}
                 </span>
-                <p className="text-xs text-brand-dark italic font-light leading-relaxed">
+                <p className="text-xs text-brand-dark/90 italic font-light leading-relaxed">
                   "{student.story}"
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </Container>

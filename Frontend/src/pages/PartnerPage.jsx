@@ -15,7 +15,7 @@ import {
 } from '../constants/partnerData';
 
 // Image imports
-import communityImg from '../assets/images/Community.jpeg';
+import villageCouncilImg from '../assets/images/community_village_council.jpeg';
 
 /**
  * Premium Partner With Us Page.
@@ -89,7 +89,7 @@ const PartnerPage = () => {
       {/* Hero Section */}
       <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         <img
-          src={communityImg}
+          src={villageCouncilImg}
           alt="Salience Foundation Community Partnerships"
           className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-subtle-zoom"
         />

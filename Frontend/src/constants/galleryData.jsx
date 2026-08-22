@@ -5,6 +5,20 @@ import img4 from '../assets/images/Mud.jpeg';
 import img5 from '../assets/images/Team.jpeg';
 import img6 from '../assets/images/Village_People.jpeg';
 
+// New high-resolution generated assets
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import digitalClassImg from '../assets/images/digital_classroom_learning.jpeg';
+import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
+import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
+import villageCouncilImg from '../assets/images/community_village_council.jpeg';
+import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg';
+import tournamentCupImg from '../assets/images/tournament_scouting_cup.jpeg';
+import studentAnjaliImg from '../assets/images/student_athlete_anjali.jpeg';
+import studentRahulImg from '../assets/images/student_athlete_rahul.jpeg';
+import studentSunitaImg from '../assets/images/student_athlete_sunita.jpeg';
+import studentAmitImg from '../assets/images/student_athlete_amit.jpeg';
+
 export const GALLERY_CATEGORIES = [
   'All', 
   'Football', 
@@ -17,53 +31,90 @@ export const GALLERY_CATEGORIES = [
 
 export const GALLERY_IMAGES = [
   { 
-    src: img3, 
-    title: 'Flagship Training Session', 
+    src: girlsMatchImg, 
+    title: 'Inter-Block Girls Championship', 
     category: 'Girls Empowerment', 
-    desc: 'Empowering young girls through standard football instruction and teamwork exercises.' 
+    desc: 'Empowering young girls through high-energy football matches and teamwork on grassroots pitches.' 
+  },
+  { 
+    src: youthTrainingImg, 
+    title: 'Agility & Footwork Drills', 
+    category: 'Training', 
+    desc: 'Youth trainees completing speed ladders and cone positioning drills under coach supervision.' 
+  },
+  { 
+    src: tournamentCupImg, 
+    title: 'Salience Rural Football Cup', 
+    category: 'Football', 
+    desc: 'Hundreds of village spectators gathering around the pitch to cheer local youth talent.' 
+  },
+  { 
+    src: trophyImg, 
+    title: 'Championship Victory Ceremony', 
+    category: 'Football', 
+    desc: 'Trainees proudly hoisting the tournament cup and medals after a season of dedicated practice.' 
+  },
+  { 
+    src: digitalClassImg, 
+    title: 'After-School Digital Literacy', 
+    category: 'Workshops', 
+    desc: 'Equipping student-athletes with computers, tablets, and academic support to ensure 100% school retention.' 
+  },
+  { 
+    src: culturalArtsImg, 
+    title: 'Indigenous Music & Art Workshop', 
+    category: 'Workshops', 
+    desc: 'Preserving cultural heritage and fostering artistic expression through traditional music and dance.' 
+  },
+  { 
+    src: villageCouncilImg, 
+    title: 'Panchayat & Parent Alignment Council', 
+    category: 'Community', 
+    desc: 'Collaborative assemblies with village elders and parents ensuring support for youth sports participation.' 
+  },
+  { 
+    src: coachMentorshipImg, 
+    title: 'Tactical Coaching & Mentorship', 
+    category: 'Volunteers', 
+    desc: 'Volunteer coaches breaking down match strategies and leadership values with eager young players.' 
+  },
+  { 
+    src: studentAnjaliImg, 
+    title: 'Spotlight: State Forward Anjali', 
+    category: 'Girls Empowerment', 
+    desc: 'Rising star leading her district team with exceptional sportsmanship and academic excellence.' 
+  },
+  { 
+    src: studentRahulImg, 
+    title: 'Spotlight: Academy Captain Rahul', 
+    category: 'Training', 
+    desc: 'Dedicated captain modeling discipline, grit, and peer mentorship on and off the field.' 
   },
   { 
     src: img4, 
-    title: 'Clay Pitch Scouting Cup', 
+    title: 'Monsoon Clay Pitch Trials', 
     category: 'Football', 
-    desc: 'Local youth showing raw determination during our annual rainy season scout cups.' 
-  },
-  { 
-    src: img5, 
-    title: 'U-17 Academy Squad', 
-    category: 'Training', 
-    desc: 'Selected student-athletes gearing up for state-level football league trials.' 
-  },
-  { 
-    src: img2, 
-    title: 'Parent Alignment Council', 
-    category: 'Community', 
-    desc: 'Collaborative meetings with village leaders to verify school retention guidelines.' 
-  },
-  { 
-    src: img1, 
-    title: 'After-School Scholars', 
-    category: 'Training', 
-    desc: 'Combining sports training with computer lessons and secondary school tuitions.' 
+    desc: 'Local youth showing raw determination during annual grassroots scouting trials.' 
   },
   { 
     src: img6, 
-    title: 'Rural Outreach Hub', 
+    title: 'Village Outreach Gathering', 
     category: 'Community', 
-    desc: 'Local village supporters gathering to celebrate youth achievements on the pitch.' 
+    desc: 'Community elders and families gathering to celebrate youth milestones in sports and education.' 
   }
 ];
 
 export const FEATURED_IMAGES = [
   {
-    src: img5,
-    title: 'Salience Academy Selection Team',
-    category: 'Training',
-    desc: 'Our selection teams go through professional fitness training camps and strategic leadership seminars. This picture showcases the under-17 squad preparing for regional matches.'
+    src: tournamentCupImg,
+    title: 'Salience Rural Football Cup',
+    category: 'Football',
+    desc: 'Our flagship scouting cup brings together village teams from across Jharkhand and Bihar. Surrounded by cheering communities, young athletes gain competitive exposure and life-changing sports opportunities.'
   },
-  { src: img3, title: 'Girls Sports Clinic' },
-  { src: img4, title: 'Village Pitch Action' },
-  { src: img1, title: 'Scholars in Classroom' }
+  { src: girlsMatchImg, title: 'Girls Sports Championship' },
+  { src: trophyImg, title: 'Victory & Medals Moment' },
+  { src: digitalClassImg, title: 'Digital Learning Hub' },
+  { src: culturalArtsImg, title: 'Cultural Expression Camp' }
 ];
 
 export const COMMUNITY_STORY_SECTIONS = [
