@@ -4,9 +4,9 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import AchievementCard from '../ui/AchievementCard';
 import Button from '../ui/Button';
-import mudImg from '../../assets/images/Mud.jpeg';
-import childrenImg from '../../assets/images/Children.jpeg';
-import teamImg from '../../assets/images/Team.jpeg';
+import trophyImg from '../../assets/images/trophy_celebration_milestone.jpeg';
+import digitalClassImg from '../../assets/images/digital_classroom_learning.jpeg';
+import tournamentCupImg from '../../assets/images/tournament_scouting_cup.jpeg';
 
 /**
  * Achievements Section presenting key institutional milestones with a "View All" link.
@@ -14,19 +14,19 @@ import teamImg from '../../assets/images/Team.jpeg';
 const Achievements = () => {
   const achievements = [
     {
-      image: teamImg,
+      image: trophyImg,
       title: '50+ State-Level Athletes Produced',
       description: 'Our trainees have represented states like Bihar, Jharkhand, and West Bengal in sub-junior and junior national tournaments.',
       date: 'Athletic Milestone'
     },
     {
-      image: childrenImg,
+      image: digitalClassImg,
       title: '100% Secondary School Completion',
       description: 'Zero dropouts among our sports scholars. Every youth in our football training program maintains active enrollment in secondary school.',
       date: 'Academic Success'
     },
     {
-      image: mudImg,
+      image: tournamentCupImg,
       title: 'National Grassroots Excellence Award',
       description: 'Recognized by regional sports bodies for developing community football infrastructure in remote villages with zero state support.',
       date: 'Institutional Honor'

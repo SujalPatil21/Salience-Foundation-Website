@@ -8,7 +8,7 @@ import FAQAccordion from '../components/ui/FAQAccordion';
 import { WHY_CONTACT_CARDS, FAQS } from '../constants/contactData';
 
 // Image import
-import girlsImg from '../assets/images/Girls.jpeg';
+import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg';
 
 const InteractiveMap = React.lazy(() => import('../components/maps/InteractiveMap'));
 
@@ -84,7 +84,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         <img
-          src={girlsImg}
+          src={coachMentorshipImg}
           alt="Contact Salience Foundation"
           className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-subtle-zoom"
         />

@@ -19,10 +19,11 @@ import {
 import { BORDER_RADIUS, SHADOWS } from '../constants/design';
 
 // Image imports
-import communityImg from '../assets/images/Community.jpeg';
-import teamImg from '../assets/images/Team.jpeg';
-import girlsImg from '../assets/images/Girls.jpeg';
-import villageImg from '../assets/images/Village_People.jpeg';
+import villageCouncilImg from '../assets/images/community_village_council.jpeg';
+import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
+import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg';
 
 /**
  * Premium Cinematic About Page for Salience Foundation.
@@ -50,7 +51,7 @@ const AboutPage = () => {
         
         {/* Background Image */}
         <img
-          src={communityImg}
+          src={villageCouncilImg}
           alt="Salience Foundation Youth and Community in Ranchi"
           className="absolute inset-0 w-full h-full object-cover opacity-45 scale-105 animate-subtle-zoom"
         />
@@ -143,7 +144,7 @@ const AboutPage = () => {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left Column: Image */}
+            {/* Left Column: Authentic Photography */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -152,7 +153,7 @@ const AboutPage = () => {
               className="lg:col-span-5"
             >
               <GlowImage
-                src={teamImg}
+                src={trophyImg}
                 alt="Salience Foundation Youth Team in Ranchi"
                 glowDirection="l"
                 imageClassName="h-[460px] lg:h-[560px]"
@@ -231,43 +232,49 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className={`bg-white p-8 md:p-10 flex flex-col justify-between ${BORDER_RADIUS.card} ${SHADOWS.card} border border-gray-100 relative group overflow-hidden`}
+                className={`bg-white rounded-2xl ${SHADOWS.card} border border-gray-100 relative group overflow-hidden flex flex-col justify-between`}
               >
-                {/* Subtle top yellow accent bar on hover */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="inline-block px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-yellow-800 bg-brand-yellow/20 rounded-md">
-                      {pillar.badge}
-                    </span>
-                    <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-brand-black group-hover:bg-brand-yellow transition-colors duration-300">
-                      {pillar.icon}
+                {/* Pillar Image */}
+                {pillar.image && (
+                  <div className="h-52 w-full overflow-hidden bg-gray-100 relative">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-block px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-black bg-brand-yellow rounded-md shadow-xs">
+                        {pillar.badge}
+                      </span>
                     </div>
                   </div>
+                )}
 
-                  <h4 className="text-xs uppercase font-bold tracking-widest text-brand-olive mb-1">
-                    {pillar.subtitle}
-                  </h4>
+                <div className="p-8 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h4 className="text-xs uppercase font-bold tracking-widest text-brand-olive mb-1">
+                      {pillar.subtitle}
+                    </h4>
 
-                  <h3 className="text-2xl font-bold text-brand-black mb-4 font-heading">
-                    {pillar.title}
-                  </h3>
+                    <h3 className="text-2xl font-bold text-brand-black mb-3 font-heading">
+                      {pillar.title}
+                    </h3>
 
-                  <p className="text-brand-dark font-light text-sm md:text-base leading-relaxed mb-6">
-                    {pillar.desc}
-                  </p>
-                </div>
+                    <p className="text-brand-dark font-light text-sm md:text-base leading-relaxed mb-6">
+                      {pillar.desc}
+                    </p>
+                  </div>
 
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
-                  {pillar.tags.map((tag, tIdx) => (
-                    <span 
-                      key={tIdx}
-                      className="px-2.5 py-1 text-[11px] font-medium text-brand-dark bg-gray-50 border border-gray-200/60 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                    {pillar.tags.map((tag, tIdx) => (
+                      <span 
+                        key={tIdx}
+                        className="px-2.5 py-1 text-[11px] font-medium text-brand-dark bg-gray-50 border border-gray-200/60 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

@@ -4,9 +4,9 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import InitiativeCard from '../ui/InitiativeCard';
 import Button from '../ui/Button';
-import mudImg from '../../assets/images/Mud.jpeg';
-import girlsImg from '../../assets/images/Girls.jpeg';
-import childrenImg from '../../assets/images/Children.jpeg';
+import youthTrainingImg from '../../assets/images/youth_football_training.jpeg';
+import girlsMatchImg from '../../assets/images/girls_football_match.jpeg';
+import digitalClassImg from '../../assets/images/digital_classroom_learning.jpeg';
 
 /**
  * Programs Preview Section displaying core programs with links to the full page.
@@ -14,20 +14,20 @@ import childrenImg from '../../assets/images/Children.jpeg';
 const ProgramsPreview = () => {
   const initiatives = [
     {
-      image: mudImg,
+      image: youthTrainingImg,
       title: 'Rural Grassroots Academy',
       description: 'Identifying elite potential in isolated areas, providing structured training pitches, standard boots, footballs, and expert local coaching.',
       badge: 'Athletics'
     },
     {
-      image: girlsImg,
+      image: girlsMatchImg,
       title: 'Girls’ Empowerment Sports',
       description: 'Defying stereotypes by running dedicated female tournaments and training camps, supporting sports as a tool for confidence and leadership.',
       badge: 'Equality'
     },
     {
-      image: childrenImg,
-      title: 'Academic Scholarship Program',
+      image: digitalClassImg,
+      title: 'Academic & Digital Classrooms',
       description: 'Ensuring that top athletes are supported with secondary schooling tuition fees, digital learning equipment, and study mentorship.',
       badge: 'Education'
     }

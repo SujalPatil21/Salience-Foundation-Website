@@ -4,8 +4,8 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import EventCard from '../ui/EventCard';
 import Button from '../ui/Button';
-import girlsImg from '../../assets/images/Girls.jpeg';
-import childrenImg from '../../assets/images/Children.jpeg';
+import tournamentCupImg from '../../assets/images/tournament_scouting_cup.jpeg';
+import digitalClassImg from '../../assets/images/digital_classroom_learning.jpeg';
 
 /**
  * Events Section displaying tournaments and educational summits with a View All link.
@@ -13,14 +13,14 @@ import childrenImg from '../../assets/images/Children.jpeg';
 const Events = () => {
   const events = [
     {
-      image: girlsImg,
+      image: tournamentCupImg,
       date: 'Oct 12, 2026',
       location: 'Ranchi, Jharkhand',
       title: 'Salience Rural Football Cup 2026',
       description: 'Our annual scouting cup bringing together 32 village teams to compete, collaborate, and showcase talent before state selectors.'
     },
     {
-      image: childrenImg,
+      image: digitalClassImg,
       date: 'Dec 05, 2026',
       location: 'Patna, Bihar',
       title: 'Youth Leadership & Digital Summit',

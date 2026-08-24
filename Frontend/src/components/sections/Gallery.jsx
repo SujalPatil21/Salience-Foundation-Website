@@ -5,24 +5,24 @@ import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
 import { BORDER_RADIUS, SHADOWS, TRANSITIONS } from '../../constants/design';
-import img1 from '../../assets/images/Children.jpeg';
-import img2 from '../../assets/images/Community.jpeg';
-import img3 from '../../assets/images/Girls.jpeg';
-import img4 from '../../assets/images/Mud.jpeg';
-import img5 from '../../assets/images/Team.jpeg';
-import img6 from '../../assets/images/Village_People.jpeg';
+import girlsMatchImg from '../../assets/images/girls_football_match.jpeg';
+import youthTrainingImg from '../../assets/images/youth_football_training.jpeg';
+import tournamentCupImg from '../../assets/images/tournament_scouting_cup.jpeg';
+import trophyImg from '../../assets/images/trophy_celebration_milestone.jpeg';
+import digitalClassImg from '../../assets/images/digital_classroom_learning.jpeg';
+import culturalArtsImg from '../../assets/images/cultural_arts_workshop.jpeg';
 
 /**
  * Gallery Section showcasing community photos.
  */
 const Gallery = () => {
   const images = [
-    { src: img1, title: 'Youth Scholars', tag: 'Academic support program' },
-    { src: img2, title: 'Community Assembly', tag: 'Parent alignment workshops' },
-    { src: img3, title: 'Girls Athletic Bootcamp', tag: 'Fostering gender parity' },
-    { src: img4, title: 'Village Pitch Development', tag: 'Raw grit on clay fields' },
-    { src: img5, title: 'U-17 Selection Team', tag: 'Preparing for state trials' },
-    { src: img6, title: 'Local Supporters', tag: 'Villagers cheering sports drives' }
+    { src: girlsMatchImg, title: 'Girls Sports Championship', tag: 'Girls Empowerment' },
+    { src: youthTrainingImg, title: 'Agility & Footwork Drills', tag: 'Grassroots Training' },
+    { src: tournamentCupImg, title: 'Rural Football Cup', tag: 'Tournaments' },
+    { src: trophyImg, title: 'Championship Victory', tag: 'Athletic Milestones' },
+    { src: digitalClassImg, title: 'Digital Learning Center', tag: 'Academic Tutoring' },
+    { src: culturalArtsImg, title: 'Indigenous Arts & Music', tag: 'Cultural Preservation' }
   ];
 
   return (

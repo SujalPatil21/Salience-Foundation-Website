@@ -16,10 +16,11 @@ import {
 import { BORDER_RADIUS, SHADOWS, TRANSITIONS } from '../constants/design';
 
 // Image imports
-import teamImg from '../assets/images/Team.jpeg';
-import girlsImg from '../assets/images/Girls.jpeg';
-import mudImg from '../assets/images/Mud.jpeg';
-import communityImg from '../assets/images/Community.jpeg';
+import tournamentCupImg from '../assets/images/tournament_scouting_cup.jpeg';
+import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
+import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
+import digitalClassImg from '../assets/images/digital_classroom_learning.jpeg';
+import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
 
 /**
  * Premium Programs Page.
@@ -43,8 +44,8 @@ const ProgramsPage = () => {
       {/* 1. Hero Section */}
       <section className="relative h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         <img
-          src={teamImg}
-          alt="Salience Foundation Youth Team"
+          src={tournamentCupImg}
+          alt="Salience Foundation Programs & Tournaments"
           className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 animate-subtle-zoom"
         />
         {/* Dark overlay to match Home Page hero */}
@@ -133,9 +134,9 @@ const ProgramsPage = () => {
             {/* Left side: Image */}
             <div className="lg:col-span-6 relative">
               <img
-                src={mudImg}
+                src={youthTrainingImg}
                 alt="YuvaGati Grassroots Academy"
-                className="rounded-2xl shadow-xl w-full h-[450px] object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-500"
+                className="rounded-2xl shadow-xl w-full h-[450px] object-cover hover:scale-[1.02] transition-all duration-500"
               />
             </div>
 
