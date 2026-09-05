@@ -15,17 +15,20 @@ import TermsConditionsPage from './pages/TermsConditionsPage';
 import RefundPolicyPage from './pages/RefundPolicyPage';
 import ContactPage from './pages/ContactPage';
 import PartnerPage from './pages/PartnerPage';
+import JoinUsPage from './pages/JoinUsPage';
 
 /**
  * Synchronous Scroll-to-Top helper.
  * Fires in useLayoutEffect before the browser paints to prevent navbar flashes.
  */
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return null;
 };
@@ -71,6 +74,7 @@ const AnimatedRoutes = () => {
         <Route path="/refunds" element={<PageTransition><RefundPolicyPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
         <Route path="/partner" element={<PageTransition><PartnerPage /></PageTransition>} />
+        <Route path="/join-us" element={<PageTransition><JoinUsPage /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

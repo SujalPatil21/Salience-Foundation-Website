@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-black text-white py-16 border-t border-gray-900">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           
           {/* Brand Info */}
           <div className="flex flex-col gap-4">
@@ -44,6 +44,30 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Get Involved */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-white font-semibold font-heading uppercase text-sm tracking-wider">
+              Get Involved
+            </h4>
+            <ul className="flex flex-col gap-2.5">
+              <li>
+                <Link to="/partner" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Partner With Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/join-us#donate" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Donate / Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/join-us#athlete" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Join as Athlete
+                </Link>
+              </li>
             </ul>
           </div>
 

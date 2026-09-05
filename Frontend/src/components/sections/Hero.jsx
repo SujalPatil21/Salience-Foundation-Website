@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import video from '../../assets/videos/Score_Football.mp4';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import { CONTAINER, Z_INDEX } from '../../constants/design';
 
@@ -75,12 +76,16 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto"
           >
-            <Button variant="primary">
-              Join as Athlete
-            </Button>
-            <Button variant="secondaryWhite">
-              Support Us
-            </Button>
+            <Link to="/join-us">
+              <Button variant="primary">
+                Join Us
+              </Button>
+            </Link>
+            <Link to="/join-us#donate">
+              <Button variant="secondaryWhite">
+                Support Us
+              </Button>
+            </Link>
           </motion.div>
 
         </motion.div>
