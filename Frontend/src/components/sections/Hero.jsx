@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import video from '../../assets/videos/Score_Football.mp4';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import { CONTAINER, Z_INDEX } from '../../constants/design';
@@ -11,6 +10,27 @@ import { CONTAINER, Z_INDEX } from '../../constants/design';
  * No stats cards are embedded here to keep the design clean and spacious.
  */
 const Hero = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const listener = (event) => {
+      setPrefersReducedMotion(event.matches);
+    };
+    
+    // Some older browsers might not support addEventListener on media query lists
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', listener);
+      return () => mediaQuery.removeEventListener('change', listener);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(listener);
+      return () => mediaQuery.removeListener(listener);
+    }
+  }, []);
+
   const fadeInSlideUp = {
     initial: { opacity: 0, y: 40 },
     animate: { opacity: 1, y: 0 },
@@ -19,18 +39,28 @@ const Hero = () => {
   return (
     <section className="relative h-[100svh] min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
 
+      {/* Poster Image (Always loads immediately) */}
+      <div 
+        className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat ${Z_INDEX.videoBg} scale-105 transition-opacity duration-1000 ${isVideoLoaded && !prefersReducedMotion ? 'opacity-0' : 'opacity-60'}`}
+        style={{ backgroundImage: 'url("/images/hero-poster.jpg")' }}
+      />
 
       {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={`absolute inset-0 w-full h-full object-cover ${Z_INDEX.videoBg} opacity-60 scale-105 animate-subtle-zoom`}
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {!prefersReducedMotion && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/images/hero-poster.jpg"
+          onCanPlay={() => setIsVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover ${Z_INDEX.videoBg} scale-105 animate-subtle-zoom transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-60' : 'opacity-0'}`}
+        >
+          <source src="/videos/Score_Football.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
 
       {/* Dark Overlay */}
       <div className={`absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/85 ${Z_INDEX.overlay}`} />
