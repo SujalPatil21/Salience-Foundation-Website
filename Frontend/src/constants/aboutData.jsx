@@ -14,94 +14,94 @@ export const ABOUT_HERO = {
 };
 
 export const ABOUT_OVERVIEW = {
-  intro: 'Salience Foundation, a Non-Profit (Section 8 Company) organization based in Ranchi, Jharkhand, is dedicated to promoting rural sporting talents and fostering an environment for artistic learning and cultural development. The foundation firmly believes in the transformative power of sports and culture to positively impact individuals and communities alike.',
-  missionDetail: 'At the core of their mission is empowering rural sporting talents. Salience Foundation recognizes that talent knows no boundaries and seeks to identify and nurture exceptional athletes and sports enthusiasts in remote regions. Through access to resources, coaching, and opportunities, the foundation aims to provide these young athletes with a platform to shine and reach their full potential.',
-  artsDetail: 'Beyond sports, the foundation values the significance of artistic expression. They endeavor to cultivate talents in music, dance, theater, and visual arts, aiming to instill passion and appreciation for art among individuals. By nurturing creative abilities, Salience Foundation seeks to enrich the lives of those they touch, encouraging them to pursue their artistic dreams.',
-  cultureDetail: 'Cultural development is another focal point of their mission. The foundation is committed to preserving and promoting cultural heritage, traditions, and practices. Their initiatives raise awareness about diverse cultures, fostering a sense of unity and harmony in society.',
-  communityDetail: 'The foundation\'s work goes beyond individual transformation. Salience Foundation acknowledges the profound impact that personal growth can have on communities. Inclusivity and equality are deeply ingrained in their approach, as they strive to provide equal opportunities for all, regardless of background or location.',
-  collaborationDetail: 'To achieve their vision, Salience Foundation collaborates with local communities, educational institutions, sports organizations, artists, and cultural experts. By building strong partnerships, they amplify the impact of their initiatives and inspire positive change in society.',
-  summary: 'In summary, Salience Foundation\'s multifaceted approach encompasses empowering rural sporting talents, nurturing artistic expression, promoting cultural diversity, and inspiring personal and community transformation. Through their unwavering dedication, they envision a brighter future where sports and culture thrive, uplifting lives and building thriving communities.'
+  intro: 'Across rural India, there are young athletes with the potential to compete, aspiring artists looking for a place to learn, and communities carrying traditions that deserve to be seen, celebrated and passed on.',
+  missionDetail: 'Salience Foundation is a Section 8 non-profit based in Ranchi, Jharkhand, working to bridge that gap.',
+  artsDetail: 'We identify and nurture rural sporting talent by creating access to coaching, equipment, nutrition and opportunities to compete. At the same time, we support learning and expression across music, dance, theatre and visual arts, while working to preserve the cultural traditions that make communities unique.',
+  cultureDetail: 'Our work is rooted in a simple belief: where you come from should not decide how far your talent can go.',
+  communityDetail: 'By working with communities, schools, families, sports organisations, artists and cultural practitioners, we aim to create opportunities that are accessible, inclusive and built to last.',
+  collaborationDetail: '',
+  summary: ''
 };
 
 export const MULTIFACETED_PILLARS = [
   {
-    title: 'Rural Sporting Talents',
-    subtitle: 'Unlocking Raw Athletic Potential',
-    badge: 'Sports Excellence',
+    title: 'Helping rural talent find its playing field.',
+    subtitle: 'Rural Sporting Talents',
+    badge: 'SPORTS',
     image: youthTrainingImg,
-    desc: 'Identifying and nurturing exceptional athletes in remote regions. Providing access to quality gear, certified coaching, nutrition, and competitive platforms so young athletes reach their full potential.',
+    desc: 'Talent can be found anywhere. Access to the right resources cannot. We identify promising athletes in rural communities and help them take the next step through quality equipment, trained coaching, nutrition, physical training and opportunities to compete.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    tags: ['Grassroots Scouting', 'Coaching & Mentorship', 'Tournament Pathways']
+    tags: ['Coaching', 'Equipment', 'Opportunities']
   },
   {
-    title: 'Artistic Learning & Expression',
-    subtitle: 'Music, Dance, Theater & Visual Arts',
-    badge: 'Creative Arts',
+    title: 'Giving creativity a place to grow.',
+    subtitle: 'Music, Dance, Theatre & Visual Arts',
+    badge: 'ARTS',
     image: culturalArtsImg,
-    desc: 'Cultivating creativity and passion across visual and performing arts. Nurturing creative abilities to enrich young lives and encouraging individuals to confidently pursue their artistic dreams.',
+    desc: 'Art begins with an opportunity to learn, explore and express. Through creative learning and mentorship, we encourage individuals to discover their abilities across music, dance, theatre and visual arts and give them the confidence to pursue what they love.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
       </svg>
     ),
-    tags: ['Music & Dance', 'Theater & Drama', 'Visual Arts Workshops']
+    tags: ['Music', 'Dance', 'Theatre', 'Visual Arts']
   },
   {
-    title: 'Cultural Heritage & Diversity',
-    subtitle: 'Preserving Traditions & Fostering Unity',
-    badge: 'Cultural Development',
+    title: 'Keeping traditions alive, while bringing people together.',
+    subtitle: 'Cultural Heritage & Diversity',
+    badge: 'CULTURE',
     image: villageCouncilImg,
-    desc: 'Committed to preserving and celebrating indigenous cultural heritage, folklore, and traditions. Our initiatives raise awareness about diverse cultures to build social harmony and mutual respect.',
+    desc: 'Every community carries stories, traditions and forms of expression that are worth preserving. We work with local artists, cultural practitioners and communities to celebrate indigenous heritage, folklore and traditions, while creating greater awareness and respect for India\'s cultural diversity.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    tags: ['Heritage Preservation', 'Cultural Awareness', 'Unity & Inclusion']
+    tags: ['Traditions', 'Heritage', 'Diversity']
   },
   {
-    title: 'Community Transformation',
-    subtitle: 'Inclusivity & Equal Opportunities',
-    badge: 'Social Impact',
+    title: 'Creating opportunities that reach beyond the individual.',
+    subtitle: 'Community Transformation',
+    badge: 'COMMUNITY',
     image: girlsMatchImg,
-    desc: 'Driving collective growth through equal opportunity, gender equity, and youth empowerment. Partnering with village leaders, schools, and families to create self-sustaining, thriving communities.',
+    desc: 'Real change becomes meaningful when the wider community benefits. We work alongside village leaders, schools, families and local communities to promote equal opportunity, gender inclusion and youth participation, helping create communities where more people have the chance to learn, participate and grow.',
     icon: (
       <svg className="w-7 h-7 text-brand-black" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    tags: ['Equal Opportunity', 'Gender Equality', 'Community Ownership']
+    tags: ['Equal Opportunity', 'Inclusion', 'Transformation']
   }
 ];
 
 export const COLLABORATION_AREAS = [
   {
-    title: 'Local Communities & Panchayats',
-    desc: 'Working directly with village elders, parents, and youth coordinators to build grassroots trust and establish local practice grounds.'
+    title: '01 — Local Communities & Panchayats',
+    desc: 'Starting with the community. We work closely with village leaders, families and local youth coordinators to understand community needs, build trust and create opportunities that can grow locally.'
   },
   {
-    title: 'Educational Institutions',
-    desc: 'Partnering with rural schools and colleges to ensure sports and artistic participation boost academic retention and scholar-athlete development.'
+    title: '02 — Educational Institutions',
+    desc: 'Bringing opportunity into learning spaces. We partner with rural schools and colleges to make sports and creative learning more accessible, while encouraging participation, confidence and continued engagement with education.'
   },
   {
-    title: 'Sports Federations & Clubs',
-    desc: 'Collaborating with regional sports associations and certified coaches to open competitive pathways and tournament exposure for rural athletes.'
+    title: '03 — Sports Federations & Clubs',
+    desc: 'Creating pathways to compete. We work with sports associations, clubs and certified coaches to connect rural athletes with quality training, competitions and opportunities to take their skills further.'
   },
   {
-    title: 'Artists & Cultural Experts',
-    desc: 'Engaging traditional folk artists, music teachers, and cultural custodians to mentor youth and conduct creative learning workshops.'
+    title: '04 — Artists & Cultural Experts',
+    desc: 'Learning from those who carry the tradition. We collaborate with folk artists, musicians, theatre practitioners and cultural custodians to create learning experiences that connect young people with art, culture and local traditions.'
   }
 ];
 
 export const ABOUT_STATS = [
   {
-    value: '1200',
+    value: '1,200',
     suffix: '+',
-    label: 'Youth Reached & Empowered',
+    label: 'YOUNG PEOPLE REACHED',
     icon: (
       <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
@@ -111,7 +111,7 @@ export const ABOUT_STATS = [
   {
     value: '45',
     suffix: '+',
-    label: 'Rural Hamlets & Villages',
+    label: 'RURAL HAMLETS & VILLAGES',
     icon: (
       <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -122,7 +122,7 @@ export const ABOUT_STATS = [
   {
     value: '42',
     suffix: '%',
-    label: 'Female Trainee Ratio',
+    label: 'FEMALE TRAINEE PARTICIPATION',
     icon: (
       <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -132,7 +132,7 @@ export const ABOUT_STATS = [
   {
     value: '100',
     suffix: '%',
-    label: 'Free Access for Students',
+    label: 'FREE ACCESS FOR STUDENTS',
     icon: (
       <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -143,14 +143,14 @@ export const ABOUT_STATS = [
 
 export const GOVERNANCE_CREDENTIALS = [
   {
-    title: 'Section 8 Non-Profit Company',
-    desc: 'Registered under Section 8 of the Companies Act, 2013, based in Ranchi, Jharkhand.',
-    badge: 'Legal Entity'
+    title: 'Headquarters',
+    desc: 'Ranchi, Jharkhand, India. Working with communities and talent across rural India.',
+    badge: 'HQ'
   },
   {
-    title: 'Section 12A & 80G Compliant',
-    desc: 'Donors receive tax exemption benefits under Section 80G of the Income Tax Act, India.',
-    badge: 'Tax Exemption'
+    title: 'Legal Structure',
+    desc: 'Registered Section 8 Non-Profit Company with 12A/80G tax exemption.',
+    badge: 'Legal Entity'
   },
   {
     title: 'MCA CSR-1 Registered',

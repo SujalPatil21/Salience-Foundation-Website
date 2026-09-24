@@ -59,7 +59,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading tracking-tight leading-none max-w-4xl"
           >
             Talent exists everywhere.<br />
-            Opportunity <span className="text-brand-yellow">does not.</span>
+            Opportunity <span className="text-brand-yellow">should too.</span>
           </motion.h1>
 
           <motion.p
@@ -67,7 +67,7 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
             className="mt-6 text-base md:text-lg text-white/85 font-light max-w-2xl leading-relaxed"
           >
-            We bridge the gap for rural youth across India by providing the resources, training, and platforms required to turn grit into greatness.
+            Salience Foundation works with rural communities across India to create opportunities in sports, arts and culture helping talent discover its potential and communities grow stronger.
           </motion.p>
 
           {/* CTAs */}

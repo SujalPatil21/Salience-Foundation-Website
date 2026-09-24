@@ -98,14 +98,14 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="tel:+919876543210"
+                  href="tel:+918092516871"
                   aria-label="Call Salience Foundation phone number"
                   className="flex items-center gap-3 hover:text-white transition-colors duration-[280ms] group cursor-pointer"
                 >
                   <svg className="w-[18px] h-[18px] text-[#F3EA00] group-hover:text-[#F3EA00] flex-shrink-0 transition-colors duration-[280ms]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Phone: +91 98765 43210</span>
+                  <span>Phone: +91 80925 16871</span>
                 </a>
               </li>
             </ul>
