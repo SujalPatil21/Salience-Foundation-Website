@@ -179,26 +179,26 @@ const AboutPage = () => {
               className="lg:col-span-7 flex flex-col items-start"
             >
               <SectionHeading
-                badge="Our Journey & Story"
-                title={ABOUT_OVERVIEW.headline}
+                badge="About Us"
+                title="Creating opportunities for talent to grow."
                 align="left"
                 className="mb-6"
               />
               
               <p className="text-brand-dark font-normal text-base md:text-lg leading-relaxed mb-5">
-                {ABOUT_OVERVIEW.intro}
+                <strong className="text-brand-black font-semibold">Talent doesn't always come with access.</strong>
+              </p>
+              
+              <p className="text-brand-dark font-normal text-base md:text-lg leading-relaxed mb-5">
+                Across rural India, there are young athletes with the potential to compete, aspiring artists looking for a place to learn, and communities carrying traditions that deserve to be seen, celebrated and passed on.
               </p>
 
               <p className="text-brand-dark/90 font-light text-base leading-relaxed mb-5">
-                {ABOUT_OVERVIEW.spark}
-              </p>
-
-              <p className="text-brand-dark/90 font-light text-base leading-relaxed mb-5">
-                {ABOUT_OVERVIEW.founding}
+                Salience Foundation is a Section 8 non-profit based in Ranchi, Jharkhand, working to bridge that gap. We identify and nurture rural sporting talent by creating access to coaching, equipment, nutrition and opportunities to compete.
               </p>
 
               <p className="text-brand-dark/90 font-light text-base leading-relaxed mb-6">
-                {ABOUT_OVERVIEW.potential} {ABOUT_OVERVIEW.mission}
+                At the same time, we support learning and expression across music, dance, theatre and visual arts, while working to preserve the cultural traditions that make communities unique. Our work is rooted in a simple belief: where you come from should not decide how far your talent can go.
               </p>
 
               {/* Badges Box */}
@@ -307,9 +307,9 @@ const AboutPage = () => {
       <section className="bg-white py-24 md:py-32 border-b border-gray-100">
         <Container>
           <SectionHeading
-            badge="Our Multifaceted Approach"
-            title="Empowering individuals, enriching culture, and uplifting communities"
-            subtitle="How our interconnected initiatives create meaningful, holistic opportunities for rural youth."
+            badge="OUR FOCUS / IMPACT AREAS"
+            title="Where We Create Opportunity"
+            subtitle="From the playing field to the stage and from classrooms to communities, our work focuses on talent, culture and inclusion."
             align="center"
           />
 
@@ -379,8 +379,8 @@ const AboutPage = () => {
         <Container className="relative z-10">
           <SectionHeading
             badge="Collaborative Impact"
-            title="Building partnerships to amplify positive change"
-            subtitle="To achieve our vision, Salience Foundation brings together communities, schools, sports organisations, artists and cultural practitioners."
+            title="Change grows when communities work together."
+            subtitle="Salience Foundation works with people and organisations who can help turn opportunity into action from village communities and schools to sports bodies, artists and cultural practitioners."
             align="center"
             className="[&_h2]:text-white [&_p]:text-white/70"
           />
@@ -422,8 +422,8 @@ const AboutPage = () => {
         <Container>
           <SectionHeading
             badge="Measurable Reach"
-            title="Creating tangible impact across rural communities"
-            subtitle="We track athlete participation, girls enrollment, school retention, and community engagement continuously."
+            title="Making every opportunity count."
+            subtitle="We track participation, reach and engagement across the communities we work with, so we can understand where our efforts are making a difference and where more support is needed."
             align="center"
           />
 

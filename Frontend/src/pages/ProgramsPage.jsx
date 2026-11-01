@@ -185,10 +185,10 @@ const ProgramsPage = () => {
               <motion.div
                 key={idx}
                 whileHover={{ y: -6 }}
-                className={`bg-white border border-gray-100 p-6 md:p-8 rounded-2xl flex flex-col items-start shadow-sm ${SHADOWS.card}`}
+                className={`group bg-white border border-gray-100 p-6 md:p-8 rounded-2xl flex flex-col items-start shadow-sm ${SHADOWS.card}`}
               >
-                <div className="w-12 h-12 rounded-full bg-brand-yellow/15 flex items-center justify-center text-brand-black text-2xl font-bold mb-5">
-                  {prog.icon}
+                <div className="w-12 h-12 rounded-full bg-brand-yellow/15 flex items-center justify-center text-brand-black text-2xl font-bold mb-5 transition-all duration-300 ease-out group-hover:bg-brand-yellow/30 group-hover:shadow-[0_4px_12px_rgba(243,234,0,0.3)] group-hover:scale-110 group-hover:-rotate-3">
+                  <prog.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold text-brand-black mb-3 font-heading leading-snug">
                   {prog.title}

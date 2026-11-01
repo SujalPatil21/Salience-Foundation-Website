@@ -1,43 +1,55 @@
+import React from 'react';
+import { 
+  FootballIcon, 
+  CommunityIcon, 
+  MentorshipIcon, 
+  LeadershipIcon, 
+  FitnessIcon, 
+  SkillIcon, 
+  TeamworkIcon, 
+  EqualityIcon 
+} from '../components/ui/icons/ProgramIcons';
+
 export const PROGRAM_AREAS = [
   {
     title: 'Girls Football Training',
     desc: 'Promoting participation and opportunities for girls through structured, elite football coaching and local league support.',
-    icon: '⚽'
+    icon: FootballIcon
   },
   {
     title: 'Community Outreach',
     desc: 'Building stronger, more supportive communities through sports-based engagement and parents alignment workshops.',
-    icon: '📍'
+    icon: CommunityIcon
   },
   {
     title: 'Sports Mentorship',
     desc: 'Providing consistent guidance, sports psychological support, and mentorship pathways for young athletes.',
-    icon: '🤝'
+    icon: MentorshipIcon
   },
   {
     title: 'Leadership Development',
     desc: 'Helping children develop public speaking, team management, and critical leadership skills through football.',
-    icon: '👑'
+    icon: LeadershipIcon
   },
   {
     title: 'Physical Fitness',
     desc: 'Encouraging healthy lifestyles, body positivity, and regular exercise habits through sports participation.',
-    icon: '💪'
+    icon: FitnessIcon
   },
   {
     title: 'Skill Enhancement',
     desc: 'Developing specialized football skills, positioning awareness, and technical play alongside valuable life skills.',
-    icon: '📈'
+    icon: SkillIcon
   },
   {
     title: 'Teamwork',
     desc: 'Teaching collaboration, communication, mutual respect, and standard sportsmanship in game formats.',
-    icon: '👥'
+    icon: TeamworkIcon
   },
   {
     title: 'Gender Equality Through Sports',
     desc: 'Using football to break gender stereotypes, establishing equal play rights and equal resources for girls and boys.',
-    icon: '⚡'
+    icon: EqualityIcon
   }
 ];
 
