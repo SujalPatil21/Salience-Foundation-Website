@@ -6,6 +6,7 @@ import EventCard from '../ui/EventCard';
 import Button from '../ui/Button';
 import tournamentCupImg from '../../assets/images/tournament_scouting_cup.jpeg';
 import digitalClassImg from '../../assets/images/digital_classroom_learning.jpeg';
+import jwlHeroPoster from '../../assets/images/jwl/jwl_hero_poster.png';
 
 /**
  * Events Section displaying tournaments and educational summits with a View All link.
@@ -38,7 +39,30 @@ const Events = () => {
           align="center"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 mb-0 max-w-4xl mx-auto">
+        {/* Featured Flagship: Jharkhand Women's League */}
+        <div className="mt-8 mb-12 max-w-4xl mx-auto rounded-2xl bg-gradient-to-r from-neutral-900 via-neutral-950 to-black p-6 sm:p-8 text-white border border-neutral-800 shadow-xl flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex-1 text-left">
+            <span className="inline-block px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-black bg-brand-yellow rounded-md mb-3">
+              Official Tournament · Nov 02 – 20, 2026
+            </span>
+            <h3 className="text-xl sm:text-2xl font-extrabold font-heading text-white mb-2">
+              The Inaugural Jharkhand Women's League (JWL 2026–27)
+            </h3>
+            <p className="text-xs sm:text-sm text-neutral-300 font-light mb-5 leading-relaxed">
+              6 participating clubs, 10 match days, and 30 official matches at CAG Sports Complex, Hinoo, Ranchi. Organized by JFA and presented by KnovaOne in co-partnership with Salience Foundation.
+            </p>
+            <Link to="/jharkhand-womens-league">
+              <Button variant="primary">
+                Explore JWL 2026 Fixtures & Teams
+              </Button>
+            </Link>
+          </div>
+          <div className="w-full sm:w-56 h-40 rounded-xl overflow-hidden flex-shrink-0 border border-neutral-700 shadow-md">
+            <img src={jwlHeroPoster} alt="JWL 2026-27 Official Banner" className="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4 mb-0 max-w-4xl mx-auto">
           {events.map((event, idx) => (
             <EventCard
               key={idx}

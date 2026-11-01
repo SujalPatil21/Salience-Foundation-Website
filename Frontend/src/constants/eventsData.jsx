@@ -7,6 +7,7 @@ import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg
 import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
 import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
 import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
+import jwlHeroPoster from '../assets/images/jwl/jwl_hero_poster.png';
 
 export const EVENT_CATEGORIES = [
   'All', 
@@ -19,6 +20,16 @@ export const EVENT_CATEGORIES = [
 ];
 
 export const UPCOMING_EVENTS = [
+  { 
+    title: "Inaugural Jharkhand Women's League (JWL 2026-27)", 
+    category: 'Girls Empowerment', 
+    date: 'Nov 02 - Nov 20, 2026', 
+    location: 'CAG Sports Complex, Hinoo, Ranchi', 
+    image: jwlHeroPoster,
+    badge: 'Flagship League',
+    desc: 'The official 6-club women\'s tournament organized by Jharkhand Football Association and presented by KnovaOne in co-partnership with Salience Foundation.',
+    link: '/jharkhand-womens-league'
+  },
   { 
     title: 'Salience Rural Football Cup 2026', 
     category: 'Football', 
