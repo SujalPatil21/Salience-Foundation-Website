@@ -39,14 +39,14 @@ const AboutPreview = () => {
             className="lg:col-span-7 flex flex-col items-start"
           >
             <SectionHeading
-              badge="Who We Are"
-              title="Building bridges between dreams and realities."
+              badge="About Salience Foundation"
+              title="Creating opportunities for talent to grow."
               align="left"
               className="mb-8"
             />
             
             <p className="text-brand-dark font-light text-base md:text-lg leading-relaxed mb-6">
-              <strong className="text-brand-black font-semibold">Salience Foundation</strong> is a Non-Profit (Section 8 Company) organization based in <strong className="text-brand-black font-semibold">Ranchi, Jharkhand</strong>, dedicated to promoting rural sporting talents and fostering an environment for artistic learning and cultural development.
+              Founded in March 2022 and based in <strong className="text-brand-black font-semibold">Ranchi, Jharkhand</strong>, <strong className="text-brand-black font-semibold">Salience Foundation</strong> is a Section 8 non-profit working to create opportunities for rural talent across sports, arts and culture. Our belief is simple: <span className="text-brand-black font-normal">where you come from should never determine how far you can go.</span>
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full pt-4 border-t border-gray-100">

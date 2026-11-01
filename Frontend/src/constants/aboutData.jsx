@@ -6,10 +6,11 @@ import girlsMatchImg from '../assets/images/girls_football_match.jpeg';
 
 export const ABOUT_HERO = {
   badge: 'Non-Profit · Section 8 Company · Ranchi, Jharkhand',
-  titlePrimary: 'Empowering Rural Talents.',
-  titleHighlight: 'Inspiring Cultural & Sporting Transformation.',
-  subtitle: 'Salience Foundation is dedicated to promoting rural sporting talents and fostering an environment for artistic learning, cultural preservation, and community empowerment across India.',
-  primaryCtaText: 'Our Story & Mission',
+  titlePrimary: 'Creating Opportunities',
+  titleHighlight: 'For Talent to Grow.',
+  subtitle: 'Founded in March 2022 and based in Ranchi, Jharkhand, Salience Foundation is a Section 8 non-profit working to create opportunities for rural talent across sports, arts and culture.',
+  quote: 'Our belief is simple: where you come from should never determine how far you can go.',
+  primaryCtaText: 'Our Story & Vision',
   secondaryCtaText: 'Contact Us',
 };
 
@@ -166,23 +167,27 @@ export const GOVERNANCE_CREDENTIALS = [
 
 export const ABOUT_FAQS = [
   {
-    question: 'Where is Salience Foundation based and what is its legal structure?',
-    answer: 'Salience Foundation is a Non-Profit (Section 8 Company) organization registered and headquartered in Ranchi, Jharkhand, dedicated to rural sporting talents, artistic learning, and cultural development.'
+    question: 'Where is Salience Foundation based and when was it established?',
+    answer: 'Salience Foundation is a Section 8 non-profit organization established in March 2022 and headquartered in Ranchi, Jharkhand. We work to create opportunities for rural talent across sports, arts, and culture.'
+  },
+  {
+    question: 'Who are the people behind Salience Foundation?',
+    answer: 'Salience Foundation was founded by Swati Bala, NeelKanth Kumar, and Chandan. What began in 2012–2013 as an idea between three friends has grown into a shared vision to help more people find the opportunities, encouragement, and support they need to pursue their potential.'
+  },
+  {
+    question: 'How did the journey of Salience Foundation begin?',
+    answer: 'Back in 2012–2013, we often found ourselves wondering why so many talented children in India struggled to get the support they needed to pursue sports. Having experienced similar challenges ourselves, we knew how difficult it could be to follow a passion without the right support. In 2022, we returned to that thought and officially founded the foundation.'
   },
   {
     question: 'How does Salience Foundation identify and nurture rural sporting talents?',
-    answer: 'We organize grassroots trials and athletic screenings in remote villages across Jharkhand and beyond. Enrolled athletes receive free coaching, football gear, physical training, and tournament exposure.'
+    answer: 'We organize grassroots trials and athletic screenings in remote villages across Jharkhand and surrounding regions. Enrolled athletes receive free coaching, football gear, physical conditioning, and tournament exposure.'
   },
   {
-    question: 'What artistic learning opportunities are offered beyond sports?',
-    answer: 'We cultivate creative talents in music, dance, theater, and visual arts, encouraging individuals to pursue their artistic passions and enriching community cultural life.'
-  },
-  {
-    question: 'How does the foundation preserve and promote cultural heritage?',
-    answer: 'We collaborate with local artists and cultural experts to organize workshops, celebrations, and awareness initiatives that safeguard local traditions and foster social harmony.'
+    question: 'What artistic learning and cultural opportunities are offered beyond sports?',
+    answer: 'Through sports, music, dance, theatre, visual arts, and cultural initiatives, we give people the chance to explore what they are capable of, discover new possibilities, and take pride in their talents and traditions.'
   },
   {
     question: 'How can partners and sponsors collaborate with Salience Foundation?',
-    answer: 'Corporates, educational institutions, sports bodies, and donors can partner with us for CSR projects, equipment sponsorship, or academy infrastructure development. You can reach out directly via our Contact page.'
+    answer: 'Corporates, educational institutions, sports bodies, artists, and supporters can partner with us for CSR projects, equipment sponsorship, or academy infrastructure development. You can reach out directly via our Contact page.'
   }
 ];

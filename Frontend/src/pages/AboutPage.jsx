@@ -21,14 +21,14 @@ import { BORDER_RADIUS, SHADOWS } from '../constants/design';
 // Image imports
 import villageCouncilImg from '../assets/images/community_village_council.jpeg';
 import trophyImg from '../assets/images/trophy_celebration_milestone.jpeg';
-import youthTrainingImg from '../assets/images/youth_football_training.jpeg';
-import culturalArtsImg from '../assets/images/cultural_arts_workshop.jpeg';
-import coachMentorshipImg from '../assets/images/volunteer_coach_mentorship.jpeg';
+import teamImg from '../assets/images/Team.jpeg';
 
 /**
  * Premium Cinematic About Page for Salience Foundation.
- * Incorporates official narrative: Section 8 Non-Profit based in Ranchi, Jharkhand,
- * promoting rural sporting talents, artistic learning, and cultural development.
+ * Revised with authentic narrative (Option 2):
+ * Founded in March 2022 in Ranchi, Jharkhand as a Section 8 Non-Profit
+ * by Swati Bala, NeelKanth Kumar, and Chandan.
+ * "Creating opportunities for talent to grow."
  */
 const AboutPage = () => {
   const fadeInSlideUp = {
@@ -46,7 +46,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       
-      {/* 1. Cinematic Hero Section - Matching Home Page Hero Aesthetic */}
+      {/* 1. Cinematic Hero Section */}
       <section className="relative h-[100svh] min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
         
         {/* Background Image */}
@@ -139,28 +139,38 @@ const AboutPage = () => {
         `}</style>
       </section>
 
-      {/* 2. Official Overview & Story Section */}
+      {/* 2. Official Overview & Story Section (Option 2 Copy) */}
       <section id="our-story-section" className="bg-white py-24 md:py-32 overflow-hidden border-b border-gray-100 scroll-mt-16">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left Column: Authentic Photography */}
+            {/* Left Column: Authentic Photography & Guiding Creed */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="lg:col-span-5"
+              className="lg:col-span-5 flex flex-col gap-6"
             >
               <GlowImage
                 src={trophyImg}
                 alt="Salience Foundation Youth Team in Ranchi"
                 glowDirection="l"
-                imageClassName="h-[460px] lg:h-[560px]"
+                imageClassName="h-[460px] lg:h-[540px]"
               />
+
+              {/* Guiding Principle Card */}
+              <div className="p-6 rounded-2xl bg-brand-yellow/10 border border-brand-yellow/30 relative">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-yellow-900 block mb-1">
+                  Our Guiding Conviction
+                </span>
+                <p className="text-base font-semibold text-brand-black leading-snug italic">
+                  "{ABOUT_OVERVIEW.coreBelief}"
+                </p>
+              </div>
             </motion.div>
 
-            {/* Right Column: Narrative Content */}
+            {/* Right Column: Narrative Content (Option 2 Copy) */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -196,19 +206,19 @@ const AboutPage = () => {
                 <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow" />
-                    <h4 className="font-bold text-brand-black text-xs uppercase tracking-wider">Headquarters</h4>
+                    <h4 className="font-bold text-brand-black text-xs uppercase tracking-wider">Established</h4>
                   </div>
                   <p className="text-xs text-brand-dark/85 font-light leading-relaxed">
-                    Ranchi, Jharkhand, India — driving grassroots change across remote villages.
+                    March 2022 · Section 8 Non-Profit Company headquartered in Ranchi, Jharkhand.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
                   <div className="flex items-center gap-2 mb-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow" />
-                    <h4 className="font-bold text-brand-black text-xs uppercase tracking-wider">Legal Structure</h4>
+                    <h4 className="font-bold text-brand-black text-xs uppercase tracking-wider">Scope of Impact</h4>
                   </div>
                   <p className="text-xs text-brand-dark/85 font-light leading-relaxed">
-                    Registered Section 8 Non-Profit Company with 12A/80G tax exemption.
+                    Rural sports, music, dance, theatre, visual arts & cultural initiatives.
                   </p>
                 </div>
               </div>
@@ -218,8 +228,83 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 3. Multifaceted Approach: 4 Core Pillars */}
+      {/* 3. The Founders & Shared Vision Section */}
       <section className="bg-gray-50 py-24 md:py-32 border-b border-gray-100">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center mb-14">
+            <span className="inline-block px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-olive border border-brand-olive/20 bg-brand-olive/5 rounded-full mb-4">
+              The People Behind Salience Foundation
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-brand-black tracking-tight mb-6">
+              A Shared Vision Between Three Friends
+            </h2>
+            <p className="text-brand-dark/90 font-light text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              "{ABOUT_OVERVIEW.vision}"
+            </p>
+          </div>
+
+          {/* Founders Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {ABOUT_OVERVIEW.founders.map((founder, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.12 }}
+                className="bg-white rounded-2xl p-8 border border-gray-100 text-center shadow-xs hover:border-brand-yellow/50 hover:shadow-md transition-all duration-300 flex flex-col items-center justify-between"
+              >
+                <div className="w-20 h-20 rounded-full bg-brand-yellow/20 text-brand-black font-heading font-black text-xl flex items-center justify-center mb-5 border-2 border-brand-yellow/40">
+                  {founder.initials}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold font-heading text-brand-black mb-1">
+                    {founder.name}
+                  </h3>
+                  <span className="text-xs font-semibold text-brand-olive uppercase tracking-wider">
+                    {founder.role}
+                  </span>
+                </div>
+                <div className="mt-4 pt-4 border-t border-gray-50 w-full text-center">
+                  <span className="text-[11px] text-brand-dark/60 font-light">Salience Foundation</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Official Sign-off Banner */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center mt-12 max-w-2xl mx-auto"
+          >
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-gray-200/80 shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-brand-yellow" />
+              <p className="text-sm font-medium text-brand-black">
+                {ABOUT_OVERVIEW.signoff}
+              </p>
+            </div>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* 4. Core Conviction Callout Banner */}
+      <section className="bg-brand-black py-16 md:py-20 text-white relative overflow-hidden border-y border-white/10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-yellow/10 rounded-full blur-[120px] pointer-events-none" />
+        <Container className="relative z-10 text-center">
+          <span className="text-brand-yellow text-xs uppercase tracking-widest font-bold mb-3 inline-block">
+            Our Guiding Creed
+          </span>
+          <blockquote className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-heading text-white max-w-4xl mx-auto leading-tight">
+            "Our belief is simple: <span className="text-brand-yellow">where you come from should never determine how far you can go.</span>"
+          </blockquote>
+        </Container>
+      </section>
+
+      {/* 5. Multifaceted Approach: 4 Core Pillars */}
+      <section className="bg-white py-24 md:py-32 border-b border-gray-100">
         <Container>
           <SectionHeading
             badge="OUR FOCUS / IMPACT AREAS"
@@ -286,7 +371,7 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 4. Collaborative Vision (Partnerships that Amplify Impact) */}
+      {/* 6. Collaborative Vision (Partnerships that Amplify Impact) */}
       <section className="bg-[#111111] text-white py-24 md:py-32 relative overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-yellow/5 rounded-full blur-[140px] pointer-events-none" />
@@ -332,7 +417,7 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 5. Impact By The Numbers */}
+      {/* 7. Impact By The Numbers */}
       <section className="bg-white py-24 md:py-32 border-b border-gray-100">
         <Container>
           <SectionHeading
@@ -356,7 +441,7 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 6. Governance, Legal Structure & Trust */}
+      {/* 8. Governance, Legal Structure & Trust */}
       <section className="bg-gray-50 py-24 md:py-32 border-b border-gray-100">
         <Container>
           <div className="max-w-4xl mx-auto text-center mb-14">
@@ -395,14 +480,14 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 7. Frequently Asked Questions */}
+      {/* 9. Frequently Asked Questions */}
       <section className="bg-white py-24 md:py-32 border-b border-gray-100">
         <Container>
           <div className="max-w-4xl mx-auto">
             <SectionHeading
               badge="Common Questions"
               title="Frequently asked questions about Salience Foundation"
-              subtitle="Key information about our location in Ranchi, Section 8 structure, programs, and collaborations."
+              subtitle="Key information about our story, founders, Section 8 structure, programs, and collaborations."
               align="center"
             />
 
@@ -413,7 +498,7 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* 8. High Impact Call to Action Section */}
+      {/* 10. High Impact Call to Action Section */}
       <section className="bg-gray-50 py-24 md:py-32">
         <Container>
           <div className="bg-gradient-to-br from-brand-black via-[#1c1c1c] to-brand-black rounded-3xl p-8 md:p-16 text-white text-center relative overflow-hidden border border-white/10 shadow-2xl">
@@ -427,11 +512,11 @@ const AboutPage = () => {
               </span>
 
               <h2 className="text-3xl md:text-5xl font-extrabold font-heading tracking-tight text-white mb-6">
-                Join Us in Building <span className="text-brand-yellow">Thriving Communities.</span>
+                Creating Opportunities <span className="text-brand-yellow">For Talent to Grow.</span>
               </h2>
 
               <p className="text-white/80 font-light text-base md:text-lg leading-relaxed mb-8 max-w-2xl">
-                Through our unwavering dedication, we envision a brighter future where sports and culture thrive, uplifting lives and unlocking the true potential of rural India.
+                Our belief is simple: where you come from should never determine how far you can go. Join us as a partner, sponsor, or supporter in empowering the next generation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
