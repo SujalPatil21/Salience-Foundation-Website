@@ -20,3 +20,96 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Partner With Us CTA Button Animations */
+.partner-cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* subtle breathing effect by default */
+  animation: breathe 3.5s ease-in-out infinite;
+  box-shadow: 0 4px 14px 0 rgba(243, 234, 0, 0.15);
+}
+
+.partner-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px 0 rgba(243, 234, 0, 0.15);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px 0 rgba(243, 234, 0, 0.25);
+    background-color: #f7f133; /* slightly brighter background */
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20%, 100% {
+    left: 200%;
+  }
+}
+
+.partner-cta-btn:hover {
+  /* Cancel breathe animation on hover, maintain a static hovered state */
+  animation: none;
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px 0 rgba(243, 234, 0, 0.35);
+  background-color: #f7f133;
+}
+
+.partner-cta-btn:hover::before {
+  /* Make the shine slightly more visible on hover */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.partner-cta-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px 0 rgba(243, 234, 0, 0.15);
+}
+
+.partner-cta-btn:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .partner-cta-btn {
+    animation: none;
+    transition: none;
+  }
+  .partner-cta-btn::before {
+    animation: none;
+    display: none;
+  }
+  .partner-cta-btn:hover {
+    transform: none;
+  }
+  .partner-cta-btn:active {
+    transform: none;
+  }
+}

@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { NAV_ITEMS } from '../../constants/navigation';
 import Button from '../ui/Button';
+import PartnerCtaButton from '../ui/PartnerCtaButton';
 import logoImg from '../../assets/images/salience logo.png';
 
 /**
@@ -37,8 +38,7 @@ const Navbar = () => {
     '/terms-conditions',
     '/refund-policy',
     '/refunds',
-    '/jharkhand-womens-league',
-    '/jwl'
+    '/join-us'
   ];
   const isScrollLinkedPage = scrollLinkedPaths.includes(location.pathname);
 
@@ -136,12 +136,11 @@ const Navbar = () => {
         <div className="flex justify-end items-center flex-shrink-0 gap-4">
           <div className="hidden lg:block">
             <Link to="/partner">
-              <Button 
-                variant="primary" 
-                className="text-xs md:text-sm px-6 py-2 shadow-sm"
+              <PartnerCtaButton 
+                className="text-xs md:text-sm shadow-sm partner-cta-btn"
               >
                 Partner With Us
-              </Button>
+              </PartnerCtaButton>
             </Link>
           </div>
 
@@ -187,9 +186,9 @@ const Navbar = () => {
           </ul>
           <div className="mt-auto pt-6 border-t border-gray-100">
             <Link to="/partner" className="block w-full">
-              <Button variant="primary" className="w-full bg-[#F3EA00] text-[#111111] hover:bg-[#E5D900] py-3.5 shadow-lg">
+              <PartnerCtaButton className="w-full text-[#111111] py-3.5 shadow-lg partner-cta-btn">
                 Partner With Us
-              </Button>
+              </PartnerCtaButton>
             </Link>
           </div>
         </div>

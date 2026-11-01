@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-black text-white py-16 border-t border-gray-900">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           
           {/* Brand Info */}
           <div className="flex flex-col gap-4">
@@ -47,6 +47,30 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Get Involved */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-white font-semibold font-heading uppercase text-sm tracking-wider">
+              Get Involved
+            </h4>
+            <ul className="flex flex-col gap-2.5">
+              <li>
+                <Link to="/partner" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Partner With Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/join-us#donate" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Donate / Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/join-us#athlete" className="text-white/60 hover:text-brand-yellow transition-colors duration-200 text-sm font-light">
+                  Join as Athlete
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Details */}
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-semibold font-heading uppercase text-sm tracking-wider">
@@ -74,14 +98,14 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="tel:+919876543210"
+                  href="tel:+918092516871"
                   aria-label="Call Salience Foundation phone number"
                   className="flex items-center gap-3 hover:text-white transition-colors duration-[280ms] group cursor-pointer"
                 >
                   <svg className="w-[18px] h-[18px] text-[#F3EA00] group-hover:text-[#F3EA00] flex-shrink-0 transition-colors duration-[280ms]" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Phone: +91 98765 43210</span>
+                  <span>Phone: +91 80925 16871</span>
                 </a>
               </li>
             </ul>

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import video from '../../assets/videos/Score_Football.mp4';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import { CONTAINER, Z_INDEX } from '../../constants/design';
 
@@ -10,6 +10,27 @@ import { CONTAINER, Z_INDEX } from '../../constants/design';
  * No stats cards are embedded here to keep the design clean and spacious.
  */
 const Hero = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const listener = (event) => {
+      setPrefersReducedMotion(event.matches);
+    };
+    
+    // Some older browsers might not support addEventListener on media query lists
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', listener);
+      return () => mediaQuery.removeEventListener('change', listener);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(listener);
+      return () => mediaQuery.removeListener(listener);
+    }
+  }, []);
+
   const fadeInSlideUp = {
     initial: { opacity: 0, y: 40 },
     animate: { opacity: 1, y: 0 },
@@ -18,18 +39,28 @@ const Hero = () => {
   return (
     <section className="relative h-[100svh] min-h-[100svh] w-full overflow-hidden flex items-center justify-center bg-black">
 
+      {/* Poster Image (Always loads immediately) */}
+      <div 
+        className={`absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat ${Z_INDEX.videoBg} scale-105 transition-opacity duration-1000 ${isVideoLoaded && !prefersReducedMotion ? 'opacity-0' : 'opacity-60'}`}
+        style={{ backgroundImage: 'url("/images/hero-poster.jpg")' }}
+      />
 
       {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={`absolute inset-0 w-full h-full object-cover ${Z_INDEX.videoBg} opacity-60 scale-105 animate-subtle-zoom`}
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {!prefersReducedMotion && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/images/hero-poster.jpg"
+          onCanPlay={() => setIsVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover ${Z_INDEX.videoBg} scale-105 animate-subtle-zoom transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-60' : 'opacity-0'}`}
+        >
+          <source src="/videos/Score_Football.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
 
       {/* Dark Overlay */}
       <div className={`absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/85 ${Z_INDEX.overlay}`} />
@@ -58,7 +89,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading tracking-tight leading-none max-w-4xl"
           >
             Talent exists everywhere.<br />
-            Opportunity <span className="text-brand-yellow">does not.</span>
+            Opportunity <span className="text-brand-yellow">should too.</span>
           </motion.h1>
 
           <motion.p
@@ -66,7 +97,7 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
             className="mt-6 text-base md:text-lg text-white/85 font-light max-w-2xl leading-relaxed"
           >
-            We bridge the gap for rural youth across India by providing the resources, training, and platforms required to turn grit into greatness.
+            Salience Foundation works with rural communities across India to create opportunities in sports, arts and culture helping talent discover its potential and communities grow stronger.
           </motion.p>
 
           {/* CTAs */}
@@ -75,12 +106,16 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto"
           >
-            <Button variant="primary">
-              Join as Athlete
-            </Button>
-            <Button variant="secondaryWhite">
-              Support Us
-            </Button>
+            <Link to="/join-us">
+              <Button variant="primary">
+                Join Us
+              </Button>
+            </Link>
+            <Link to="/join-us#donate">
+              <Button variant="secondaryWhite">
+                Support Us
+              </Button>
+            </Link>
           </motion.div>
 
         </motion.div>
